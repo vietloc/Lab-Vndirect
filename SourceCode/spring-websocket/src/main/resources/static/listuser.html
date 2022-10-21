@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript">
+        function connect() {
+            let socket = new SockJS('/user');
+            stompClient = Stomp.over(socket);
+            stompClient.connect({}, function (frame) {
+                console.log('Connected:' + frame);
+
+                stompClient.subscribe('/topic/chat', function (message){
+                    // let text = JSON.parse(message.body).content;
+                    //   console.log("---------"+message)
+                    //   // document.getElementById('response').innerHTML = JSON.parse(message.body).content;
+                    showMessage(JSON.parse(message.body).content);
+                });
+                loadUsers();
+            });
+            // enableChatbox(true);
+        }
+
+        function loadUsers(){
+            let xmlhtpp = new XMLHttpRequest();
+            xmlhtpp.onreadystatechange = function (){
+                if(xmlhtpp.readyState == XMLHttpRequest.DONE){
+                    // console.log(xmlhtpp.responseText);
+                    let users = JSON.parse(xmlhtpp.responseText);
+                    let select = document.getElementById('username');
+                    for(let index in users){
+                        let user = users[index];
+                        select.appendChild(createOptionUser(user));
+                    }
+                }
+            };
+            xmlhtpp.open("GET","/users", true);
+            xmlhtpp.send();
+        }
+        function createOptionUser(user){
+            let option = document.createElement('option');
+            option.appendChild(document.createTextNode(user.username));
+            let att = document.createAttribute("value");
+            att.value = user.username;
+            option.setAttributeNode(att);
+            return option;
+        }
+        function showMessage(text){
+            let response = document.getElementById('response');
+            let p = document.createElement('p');
+            p.appendChild(document.createTextNode(text));
+            response.appendChild(p);
+        }
+    </script>
+</head>
+<body onload="connect()">
+<h2>Add User</h2>
+
+
+<!--<div>-->
+<!--  <button id="connect" onclick="connect();">Connect</button>-->
+<!--  <button id="disconnect" onclick="disconnect();">Disconnect</button>-->
+<!--</div>-->
+<!--<div id="conversationDiv">-->
+<!--  <label>Message: </label><input type="text" id="message">-->
+<!--  <button id="send" onclick="send();">Send</button>-->
+<!--  <p id="response"></p>-->
+<!--</div>-->
+<form method="post" action="javascript:save()">
+    <p>Username: <input type="text" id="username" name="username" /></p>
+    <p>Password: <input type="text" id="password" name="password" /></p>
+    <p>Email: <input type="text" id="email" name="email" /></p>
+    <p>Age: <input type="text" id="age" name="age" /></p>
+    <p>GroupID: <select id="groupId" name="groupId" /></p>
+    <p class="submit"><input type="submit" name="save" value="Save"></p>
+
+    <p id="response"></p>
+</form>
+</body>
+</html>

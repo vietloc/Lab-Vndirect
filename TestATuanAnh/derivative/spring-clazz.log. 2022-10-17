@@ -1,0 +1,4 @@
+[2022-10-17 17:26:11] INFO [main] AppConfig.configureDefaultServletHandling(31) | ====Context start application org.springframework.jdbc.datasource.DriverManagerDataSource@839755f
+[2022-10-17 17:28:04] INFO [main] AppConfig.configureDefaultServletHandling(31) | ====Context start application org.springframework.jdbc.datasource.DriverManagerDataSource@2328ec73
+[2022-10-17 17:33:54] INFO [main] AppConfig.configureDefaultServletHandling(33) | ====Context start application org.springframework.jdbc.datasource.DriverManagerDataSource@2328ec73
+[2022-10-17 17:33:54] INFO [main] AppConfig.createTable(72) | ======TABLE derivative already exists !

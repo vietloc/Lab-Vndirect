@@ -1,0 +1,22 @@
+<component name="libraryTable">
+  <library name="Lab VND">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/Lab VND/JSE.Unit03.Collection.1-Win64.zip!/" />
+      <root url="jar://$PROJECT_DIR$/Lab VND/JSE.Unit13.Servlet-Win64.zip!/" />
+      <root url="jar://$PROJECT_DIR$/Lab VND/JSE.Unit07.IO-Win64.zip!/" />
+      <root url="jar://$PROJECT_DIR$/Lab VND/JSE.Unit09.Lambda-Win64.zip!/" />
+      <root url="jar://$PROJECT_DIR$/Lab VND/JSE.Unit07.NIO.2-Win64.zip!/" />
+      <root url="jar://$PROJECT_DIR$/Lab VND/JSE.Unit02.Basic.2-Win64.zip!/" />
+      <root url="jar://$PROJECT_DIR$/Lab VND/JSE.Unit08.Networking-Win64.zip!/" />
+      <root url="jar://$PROJECT_DIR$/Lab VND/JSE.Unit06.Thread-Win64.zip!/" />
+      <root url="jar://$PROJECT_DIR$/Lab VND/JSE.Unit11.Advanced-Win64.zip!/" />
+      <root url="jar://$PROJECT_DIR$/Lab VND/JSE.Unit01.Basic.1-Win64.zip!/" />
+      <root url="jar://$PROJECT_DIR$/Lab VND/JSE.Unit14.Servlet.2-Win64.zip!/" />
+      <root url="jar://$PROJECT_DIR$/Lab VND/JSE.Unit04.AWT-Win64.zip!/" />
+      <root url="jar://$PROJECT_DIR$/Lab VND/JSE.Unit12.JDBC-Win64.zip!/" />
+      <root url="jar://$PROJECT_DIR$/Lab VND/JSE.Unit10.Collection.2-Win64.zip!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

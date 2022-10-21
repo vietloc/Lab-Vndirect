@@ -1,0 +1,4 @@
+#NOTE: This is a Maven Resolver internal implementation file, its format can be changed without prior notice.
+#Tue Oct 04 14:18:21 ICT 2022
+@default-central-https\://repo.maven.apache.org/maven2/.lastUpdated=1664867901538
+https\://repo.maven.apache.org/maven2/.error=Could not transfer artifact org.javassist\:javassist\:jar\:3.25.0-GA from/to central (https\://repo.maven.apache.org/maven2)\: transfer failed for https\://repo.maven.apache.org/maven2/org/javassist/javassist/3.25.0-GA/javassist-3.25.0-GA.jar

@@ -1,0 +1,4 @@
+#NOTE: This is a Maven Resolver internal implementation file, its format can be changed without prior notice.
+#Tue Oct 04 14:18:21 ICT 2022
+@default-central-https\://repo.maven.apache.org/maven2/.lastUpdated=1664867901539
+https\://repo.maven.apache.org/maven2/.error=Could not transfer artifact org.apache.poi\:poi\:jar\:3.14 from/to central (https\://repo.maven.apache.org/maven2)\: transfer failed for https\://repo.maven.apache.org/maven2/org/apache/poi/poi/3.14/poi-3.14.jar

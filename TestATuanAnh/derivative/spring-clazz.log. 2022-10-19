@@ -1,0 +1,361 @@
+[2022-10-19 09:22:51] INFO [main] AppConfig.configureDefaultServletHandling(35) | ====Context start application org.springframework.jdbc.datasource.DriverManagerDataSource@2969a9a6
+[2022-10-19 09:22:51] ERROR [main] AppConfig.configureDefaultServletHandling(48) | com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at com.mysql.cj.jdbc.exceptions.SQLError.createCommunicationsException(SQLError.java:174)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:64)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:828)
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:448)
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:241)
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:198)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:683)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:191)
+	at org.springframework.jdbc.datasource.DriverManagerDataSource.getConnectionFromDriverManager(DriverManagerDataSource.java:155)
+	at org.springframework.jdbc.datasource.DriverManagerDataSource.getConnectionFromDriver(DriverManagerDataSource.java:146)
+	at org.springframework.jdbc.datasource.AbstractDriverBasedDataSource.getConnectionFromDriver(AbstractDriverBasedDataSource.java:205)
+	at org.springframework.jdbc.datasource.AbstractDriverBasedDataSource.getConnection(AbstractDriverBasedDataSource.java:169)
+	at com.spring.sevice.derivative.AppConfig.createTable(AppConfig.java:71)
+	at com.spring.sevice.derivative.AppConfig.configureDefaultServletHandling(AppConfig.java:37)
+	at org.springframework.web.servlet.config.annotation.WebMvcConfigurerComposite.configureDefaultServletHandling(WebMvcConfigurerComposite.java:74)
+	at org.springframework.web.servlet.config.annotation.DelegatingWebMvcConfiguration.configureDefaultServletHandling(DelegatingWebMvcConfiguration.java:73)
+	at org.springframework.web.servlet.config.annotation.WebMvcConfigurationSupport.defaultServletHandlerMapping(WebMvcConfigurationSupport.java:644)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:154)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:653)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:486)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1352)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1195)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:955)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:918)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:147)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:734)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:408)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:308)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295)
+	at com.spring.sevice.derivative.DerivativeApplication.main(DerivativeApplication.java:10)
+Caused by: com.mysql.cj.exceptions.CJCommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:483)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:61)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:105)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:151)
+	at com.mysql.cj.exceptions.ExceptionFactory.createCommunicationsException(ExceptionFactory.java:167)
+	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:89)
+	at com.mysql.cj.NativeSession.connect(NativeSession.java:120)
+	at com.mysql.cj.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:948)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:818)
+	... 37 more
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.base/sun.nio.ch.Net.connect0(Native Method)
+	at java.base/sun.nio.ch.Net.connect(Net.java:579)
+	at java.base/sun.nio.ch.Net.connect(Net.java:568)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:585)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
+	at java.base/java.net.Socket.connect(Socket.java:633)
+	at com.mysql.cj.protocol.StandardSocketFactory.connect(StandardSocketFactory.java:153)
+	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:63)
+	... 40 more
+[2022-10-19 09:33:49] INFO [main] AppConfig.configureDefaultServletHandling(35) | ====Context start application org.springframework.jdbc.datasource.DriverManagerDataSource@4e2cdc51
+[2022-10-19 09:33:49] ERROR [main] AppConfig.configureDefaultServletHandling(48) | com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at com.mysql.cj.jdbc.exceptions.SQLError.createCommunicationsException(SQLError.java:174)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:64)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:828)
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:448)
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:241)
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:198)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:683)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:191)
+	at org.springframework.jdbc.datasource.DriverManagerDataSource.getConnectionFromDriverManager(DriverManagerDataSource.java:155)
+	at org.springframework.jdbc.datasource.DriverManagerDataSource.getConnectionFromDriver(DriverManagerDataSource.java:146)
+	at org.springframework.jdbc.datasource.AbstractDriverBasedDataSource.getConnectionFromDriver(AbstractDriverBasedDataSource.java:205)
+	at org.springframework.jdbc.datasource.AbstractDriverBasedDataSource.getConnection(AbstractDriverBasedDataSource.java:169)
+	at com.spring.sevice.derivative.AppConfig.createTable(AppConfig.java:71)
+	at com.spring.sevice.derivative.AppConfig.configureDefaultServletHandling(AppConfig.java:37)
+	at org.springframework.web.servlet.config.annotation.WebMvcConfigurerComposite.configureDefaultServletHandling(WebMvcConfigurerComposite.java:74)
+	at org.springframework.web.servlet.config.annotation.DelegatingWebMvcConfiguration.configureDefaultServletHandling(DelegatingWebMvcConfiguration.java:73)
+	at org.springframework.web.servlet.config.annotation.WebMvcConfigurationSupport.defaultServletHandlerMapping(WebMvcConfigurationSupport.java:644)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:154)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:653)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:486)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1352)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1195)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:955)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:918)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:147)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:734)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:408)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:308)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295)
+	at com.spring.sevice.derivative.DerivativeApplication.main(DerivativeApplication.java:10)
+Caused by: com.mysql.cj.exceptions.CJCommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:483)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:61)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:105)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:151)
+	at com.mysql.cj.exceptions.ExceptionFactory.createCommunicationsException(ExceptionFactory.java:167)
+	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:89)
+	at com.mysql.cj.NativeSession.connect(NativeSession.java:120)
+	at com.mysql.cj.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:948)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:818)
+	... 37 more
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.base/sun.nio.ch.Net.connect0(Native Method)
+	at java.base/sun.nio.ch.Net.connect(Net.java:579)
+	at java.base/sun.nio.ch.Net.connect(Net.java:568)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:585)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
+	at java.base/java.net.Socket.connect(Socket.java:633)
+	at com.mysql.cj.protocol.StandardSocketFactory.connect(StandardSocketFactory.java:153)
+	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:63)
+	... 40 more
+[2022-10-19 09:35:03] INFO [main] AppConfig.configureDefaultServletHandling(35) | ====Context start application org.springframework.jdbc.datasource.DriverManagerDataSource@7adae08e
+[2022-10-19 09:35:03] INFO [main] AppConfig.createTable(74) | ======TABLE derivative already exists !
+[2022-10-19 09:36:21] INFO [main] AppConfig.configureDefaultServletHandling(35) | ====Context start application org.springframework.jdbc.datasource.DriverManagerDataSource@7adae08e
+[2022-10-19 09:36:21] INFO [main] AppConfig.createTable(74) | ======TABLE derivative already exists !
+[2022-10-19 09:36:39] INFO [http-nio-8080-exec-1] DerivativeDAOImpl.list(61) | FROM derivative 
+[2022-10-19 09:37:20] INFO [main] AppConfig.configureDefaultServletHandling(35) | ====Context start application org.springframework.jdbc.datasource.DriverManagerDataSource@7adae08e
+[2022-10-19 09:37:20] INFO [main] AppConfig.createTable(74) | ======TABLE derivative already exists !
+[2022-10-19 09:37:25] INFO [http-nio-8080-exec-1] DerivativeDAOImpl.list(61) | SELECT * FROM derivative 
+[2022-10-19 09:44:12] INFO [main] AppConfig.configureDefaultServletHandling(35) | ====Context start application org.springframework.jdbc.datasource.DriverManagerDataSource@7adae08e
+[2022-10-19 09:44:12] INFO [main] AppConfig.createTable(74) | ======TABLE derivative already exists !
+[2022-10-19 09:44:16] INFO [http-nio-8080-exec-1] DerivativeDAOImpl.list(61) | SELECT * FROM derivative 
+[2022-10-19 09:45:01] INFO [main] AppConfig.configureDefaultServletHandling(35) | ====Context start application org.springframework.jdbc.datasource.DriverManagerDataSource@7adae08e
+[2022-10-19 09:45:02] INFO [main] AppConfig.createTable(74) | ======TABLE derivative already exists !
+[2022-10-19 09:45:04] INFO [http-nio-8080-exec-1] DerivativeDAOImpl.list(61) | SELECT * FROM derivative 
+[2022-10-19 09:45:20] INFO [http-nio-8080-exec-4] DerivativeDAOImpl.list(61) | SELECT * FROM derivative 
+[2022-10-19 09:46:02] INFO [http-nio-8080-exec-6] DerivativeDAOImpl.list(61) | SELECT * FROM derivative order by deri_composite_code desc
+[2022-10-19 09:46:18] INFO [http-nio-8080-exec-9] DerivativeDAOImpl.list(61) | SELECT * FROM derivative order by deri_composite_code asc
+[2022-10-19 10:10:56] INFO [main] AppConfig.configureDefaultServletHandling(35) | ====Context start application org.springframework.jdbc.datasource.DriverManagerDataSource@7adae08e
+[2022-10-19 10:10:56] INFO [main] AppConfig.createTable(74) | ======TABLE derivative already exists !
+[2022-10-19 10:11:01] INFO [http-nio-8080-exec-1] DerivativeDAOImpl.list(73) | SELECT * FROM derivative where 1=1order by deri_composite_code asc
+[2022-10-19 10:11:05] INFO [http-nio-8080-exec-3] DerivativeDAOImpl.list(73) | SELECT * FROM derivative where 1=1order by deri_composite_code asc
+[2022-10-19 10:12:18] INFO [main] AppConfig.configureDefaultServletHandling(35) | ====Context start application org.springframework.jdbc.datasource.DriverManagerDataSource@49c83262
+[2022-10-19 10:12:18] INFO [main] AppConfig.createTable(74) | ======TABLE derivative already exists !
+[2022-10-19 10:12:22] INFO [http-nio-8080-exec-1] DerivativeDAOImpl.list(73) | SELECT * FROM derivative where 1=1 order by deri_composite_code asc
+[2022-10-19 10:13:36] INFO [http-nio-8080-exec-6] DerivativeDAOImpl.list(73) | SELECT * FROM derivative where 1=1 and deri_composite_code in('GB05F3Q')order by deri_composite_code asc
+[2022-10-19 10:16:35] INFO [http-nio-8080-exec-3] DerivativeDAOImpl.list(73) | SELECT * FROM derivative where 1=1 and deri_composite_code in('DEVPOOL')order by deri_composite_code asc
+[2022-10-19 10:16:42] INFO [http-nio-8080-exec-10] DerivativeDAOImpl.list(73) | SELECT * FROM derivative where 1=1 and deri_composite_code in('DEVPOOL')order by deri_composite_code asc
+[2022-10-19 10:35:26] INFO [main] AppConfig.configureDefaultServletHandling(35) | ====Context start application org.springframework.jdbc.datasource.DriverManagerDataSource@7adae08e
+[2022-10-19 10:35:26] INFO [main] AppConfig.createTable(74) | ======TABLE derivative already exists !
+[2022-10-19 10:35:30] INFO [http-nio-8080-exec-1] DerivativeDAOImpl.list(83) | SELECT * FROM derivative where 1=1 andGB05F3Q in('GB05F3Q')order by deri_composite_code asc
+[2022-10-19 10:37:38] INFO [http-nio-8080-exec-4] DerivativeDAOImpl.list(83) | SELECT * FROM derivative where 1=1 andGB05F3Q in('GB05F3Q')order by deri_composite_code asc
+[2022-10-19 10:37:51] INFO [http-nio-8080-exec-3] DerivativeDAOImpl.list(83) | SELECT * FROM derivative where 1=1 order by deri_composite_code asc
+[2022-10-19 10:38:24] INFO [http-nio-8080-exec-8] DerivativeDAOImpl.list(83) | SELECT * FROM derivative where 1=1 and in('underlying_type:Index')order by deri_composite_code asc
+[2022-10-19 10:40:27] INFO [http-nio-8080-exec-10] DerivativeDAOImpl.list(83) | SELECT * FROM derivative where 1=1 andunderlying_type in('underlying_type')order by deri_composite_code asc
+[2022-10-19 10:40:56] INFO [main] AppConfig.configureDefaultServletHandling(35) | ====Context start application org.springframework.jdbc.datasource.DriverManagerDataSource@273aaab7
+[2022-10-19 10:40:56] INFO [main] AppConfig.createTable(74) | ======TABLE derivative already exists !
+[2022-10-19 10:41:06] INFO [http-nio-8080-exec-1] DerivativeDAOImpl.list(83) | SELECT * FROM derivative where 1=1 and underlying_type in('underlying_type')order by deri_composite_code asc
+[2022-10-19 10:42:39] INFO [http-nio-8080-exec-4] DerivativeDAOImpl.list(83) | SELECT * FROM derivative where 1=1 and  in('underlying_type: BOND')order by deri_composite_code asc
+[2022-10-19 10:42:48] INFO [http-nio-8080-exec-7] DerivativeDAOImpl.list(83) | SELECT * FROM derivative where 1=1 and  in('underlying_type:BOND')order by deri_composite_code asc
+[2022-10-19 10:43:08] INFO [http-nio-8080-exec-9] DerivativeDAOImpl.list(83) | SELECT * FROM derivative where 1=1 and underlying_type in('underlying_type')order by deri_composite_code asc
+[2022-10-19 10:51:06] INFO [main] AppConfig.configureDefaultServletHandling(35) | ====Context start application org.springframework.jdbc.datasource.DriverManagerDataSource@7adae08e
+[2022-10-19 10:51:06] INFO [main] AppConfig.createTable(74) | ======TABLE derivative already exists !
+[2022-10-19 10:51:16] INFO [http-nio-8080-exec-1] DerivativeDAOImpl.list(83) | SELECT * FROM derivative where 1=1 order by deri_composite_code asc
+[2022-10-19 10:51:32] INFO [http-nio-8080-exec-6] DerivativeDAOImpl.list(83) | SELECT * FROM derivative where 1=1 order by deri_composite_code asc
+[2022-10-19 10:51:55] INFO [http-nio-8080-exec-7] DerivativeDAOImpl.list(83) | SELECT * FROM derivative where 1=1 order by deri_composite_code asc
+[2022-10-19 10:52:10] INFO [http-nio-8080-exec-10] DerivativeDAOImpl.list(83) | SELECT * FROM derivative where 1=1 order by deri_composite_code asc
+[2022-10-19 10:52:13] INFO [http-nio-8080-exec-1] DerivativeDAOImpl.list(83) | SELECT * FROM derivative where 1=1 order by deri_composite_code asc
+[2022-10-19 10:52:21] INFO [http-nio-8080-exec-6] DerivativeDAOImpl.list(83) | SELECT * FROM derivative where 1=1 order by deri_composite_code asc
+[2022-10-19 10:52:39] INFO [http-nio-8080-exec-7] DerivativeDAOImpl.list(83) | SELECT * FROM derivative where 1=1 order by deri_composite_code asc
+[2022-10-19 10:52:46] INFO [http-nio-8080-exec-9] DerivativeDAOImpl.list(83) | SELECT * FROM derivative where 1=1 order by deri_composite_code asc
+[2022-10-19 10:53:07] INFO [http-nio-8080-exec-1] DerivativeDAOImpl.list(83) | SELECT * FROM derivative where 1=1 order by deri_composite_code asc
+[2022-10-19 10:54:06] INFO [main] AppConfig.configureDefaultServletHandling(35) | ====Context start application org.springframework.jdbc.datasource.DriverManagerDataSource@273aaab7
+[2022-10-19 10:54:06] INFO [main] AppConfig.createTable(74) | ======TABLE derivative already exists !
+[2022-10-19 10:54:13] INFO [http-nio-8080-exec-1] DerivativeDAOImpl.list(83) | SELECT * FROM derivative where 1=1 order by deri_composite_code asc
+[2022-10-19 10:54:17] INFO [http-nio-8080-exec-4] DerivativeDAOImpl.list(83) | SELECT * FROM derivative where 1=1 order by deri_composite_code asc
+[2022-10-19 10:54:26] INFO [http-nio-8080-exec-7] DerivativeDAOImpl.list(83) | SELECT * FROM derivative where 1=1 order by deri_composite_code asc
+[2022-10-19 10:54:51] INFO [main] AppConfig.configureDefaultServletHandling(35) | ====Context start application org.springframework.jdbc.datasource.DriverManagerDataSource@49c83262
+[2022-10-19 10:54:51] INFO [main] AppConfig.createTable(74) | ======TABLE derivative already exists !
+[2022-10-19 10:54:54] INFO [http-nio-8080-exec-1] DerivativeDAOImpl.list(83) | SELECT * FROM derivative where 1=1 and INDEX in('INDEX')order by deri_composite_code asc
+[2022-10-19 10:54:57] INFO [http-nio-8080-exec-3] DerivativeDAOImpl.list(83) | SELECT * FROM derivative where 1=1 and INDEX in('INDEX')order by deri_composite_code asc
+[2022-10-19 10:55:27] INFO [http-nio-8080-exec-5] DerivativeDAOImpl.list(83) | SELECT * FROM derivative where 1=1 order by deri_composite_code asc
+[2022-10-19 10:55:37] INFO [http-nio-8080-exec-8] DerivativeDAOImpl.list(83) | SELECT * FROM derivative where 1=1 
+[2022-10-19 10:59:19] INFO [main] AppConfig.configureDefaultServletHandling(35) | ====Context start application org.springframework.jdbc.datasource.DriverManagerDataSource@49c83262
+[2022-10-19 10:59:19] INFO [main] AppConfig.createTable(74) | ======TABLE derivative already exists !
+[2022-10-19 10:59:30] INFO [http-nio-8080-exec-1] DerivativeDAOImpl.list(83) | SELECT * FROM derivative where 1=1 and deri_composite_code in('GB05F4Q')order by deri_composite_code asc
+[2022-10-19 10:59:40] INFO [http-nio-8080-exec-4] DerivativeDAOImpl.list(83) | SELECT * FROM derivative where 1=1 and deri_composite_code in('')order by deri_composite_code asc
+[2022-10-19 10:59:44] INFO [http-nio-8080-exec-5] DerivativeDAOImpl.list(83) | SELECT * FROM derivative where 1=1 order by deri_composite_code asc
+[2022-10-19 12:04:50] INFO [http-nio-8080-exec-8] DerivativeDAOImpl.list(83) | SELECT * FROM derivative where 1=1 
+[2022-10-19 12:04:57] INFO [http-nio-8080-exec-1] DerivativeDAOImpl.list(83) | SELECT * FROM derivative where 1=1 and deri_composite_code in('VN30F3M','VN30F2M')order by deri_composite_code asc
+[2022-10-19 13:14:25] INFO [main] AppConfig.configureDefaultServletHandling(35) | ====Context start application org.springframework.jdbc.datasource.DriverManagerDataSource@273aaab7
+[2022-10-19 13:14:25] INFO [main] AppConfig.createTable(74) | ======TABLE derivative already exists !
+[2022-10-19 13:15:31] INFO [http-nio-8080-exec-3] DerivativeDAOImpl.list(78) | SELECT * FROM derivative where 1=1 and deri_composite_code in('VN30F3M','VN30F2M')order by deri_composite_code asc
+[2022-10-19 13:15:39] INFO [http-nio-8080-exec-6] DerivativeDAOImpl.list(78) | SELECT * FROM derivative where 1=1 and deri_composite_code in('VN30F3M')order by deri_composite_code asc
+[2022-10-19 13:15:53] INFO [http-nio-8080-exec-9] DerivativeDAOImpl.list(78) | SELECT * FROM derivative where 1=1 and underlying_type in('INDEX')order by deri_composite_code asc
+[2022-10-19 13:16:03] INFO [http-nio-8080-exec-2] DerivativeDAOImpl.list(78) | SELECT * FROM derivative where 1=1 and underlying_type in('BOND')order by deri_composite_code asc
+[2022-10-19 13:16:22] INFO [http-nio-8080-exec-7] DerivativeDAOImpl.list(78) | SELECT * FROM derivative where 1=1 and underlying_type in('INDEX')order by deri_composite_code asc
+[2022-10-19 13:16:28] INFO [http-nio-8080-exec-1] DerivativeDAOImpl.list(78) | SELECT * FROM derivative where 1=1 and underlying_type in('INDEX')order by deri_composite_code asc
+[2022-10-19 13:16:34] INFO [http-nio-8080-exec-4] DerivativeDAOImpl.list(78) | SELECT * FROM derivative where 1=1 and underlying_type in('INDEX')order by deri_composite_code asc
+[2022-10-19 13:16:43] INFO [http-nio-8080-exec-3] DerivativeDAOImpl.list(78) | SELECT * FROM derivative where 1=1 and underlying_type in('INDEX')order by deri_composite_code asc
+[2022-10-19 13:16:59] INFO [http-nio-8080-exec-7] DerivativeDAOImpl.list(78) | SELECT * FROM derivative where 1=1 and underlying_type in('INDEX')order by deri_composite_code asc
+[2022-10-19 13:17:37] INFO [http-nio-8080-exec-1] DerivativeDAOImpl.list(78) | SELECT * FROM derivative where 1=1 and underlying_type in('INDEX')order by deri_composite_code asc
+[2022-10-19 13:17:42] INFO [http-nio-8080-exec-10] DerivativeDAOImpl.list(78) | SELECT * FROM derivative where 1=1 and underlying_type in('INDEX')order by deri_composite_code asc
+[2022-10-19 13:19:22] INFO [http-nio-8080-exec-3] DerivativeDAOImpl.list(78) | SELECT * FROM derivative where 1=1 and underlying_type in('INDEX')order by deri_composite_code asc
+[2022-10-19 13:19:33] INFO [http-nio-8080-exec-7] DerivativeDAOImpl.list(78) | SELECT * FROM derivative where 1=1 and underlying_type in('INDEX')order by deri_composite_code asc
+[2022-10-19 13:19:43] INFO [http-nio-8080-exec-1] DerivativeDAOImpl.list(78) | SELECT * FROM derivative where 1=1 and underlying_type in('INDEX')order by deri_composite_code asc
+[2022-10-19 13:21:39] INFO [http-nio-8080-exec-4] DerivativeDAOImpl.list(78) | SELECT * FROM derivative where 1=1 and underlying_type in('INDEX')order by deri_composite_code asc
+[2022-10-19 13:21:43] INFO [http-nio-8080-exec-3] DerivativeDAOImpl.list(78) | SELECT * FROM derivative where 1=1 and underlying_type in('INDEX')order by deri_composite_code asc
+[2022-10-19 13:21:49] INFO [http-nio-8080-exec-7] DerivativeDAOImpl.list(78) | SELECT * FROM derivative where 1=1 and underlying_type in('INDEX')order by deri_composite_code asc
+[2022-10-19 13:22:43] INFO [http-nio-8080-exec-1] DerivativeDAOImpl.list(78) | SELECT * FROM derivative where 1=1 and underlying_type in('INDEX')order by deri_composite_code asc
+[2022-10-19 13:22:54] INFO [http-nio-8080-exec-4] DerivativeDAOImpl.list(78) | SELECT * FROM derivative where 1=1 and underlying_type in('INDEX')order by deri_composite_code asc
+[2022-10-19 13:23:26] INFO [http-nio-8080-exec-5] DerivativeDAOImpl.list(78) | SELECT * FROM derivative where 1=1 and underlying_type in('INDEX')order by deri_composite_code asc
+[2022-10-19 13:23:32] INFO [http-nio-8080-exec-7] DerivativeDAOImpl.list(78) | SELECT * FROM derivative where 1=1 and underlying_type in('INDEX')order by deri_composite_code asc
+[2022-10-19 13:27:49] INFO [main] AppConfig.configureDefaultServletHandling(35) | ====Context start application org.springframework.jdbc.datasource.DriverManagerDataSource@49c83262
+[2022-10-19 13:27:49] INFO [main] AppConfig.createTable(74) | ======TABLE derivative already exists !
+[2022-10-19 13:27:51] INFO [http-nio-8080-exec-1] DerivativeDAOImpl.list(76) | SELECT * FROM derivative where 1=1 and underlying_type in('INDEX')order by deri_composite_code asc
+[2022-10-19 13:27:54] INFO [http-nio-8080-exec-2] DerivativeDAOImpl.list(76) | SELECT * FROM derivative where 1=1 and underlying_type in('INDEX')order by deri_composite_code asc
+[2022-10-19 13:27:58] INFO [http-nio-8080-exec-5] DerivativeDAOImpl.list(76) | SELECT * FROM derivative where 1=1 and underlying_type in('INDEX')order by deri_composite_code asc
+[2022-10-19 13:28:02] INFO [http-nio-8080-exec-6] DerivativeDAOImpl.list(76) | SELECT * FROM derivative where 1=1 and underlying_type in('INDEX')order by deri_composite_code asc
+[2022-10-19 13:28:10] INFO [http-nio-8080-exec-9] DerivativeDAOImpl.list(76) | SELECT * FROM derivative where 1=1 and underlying_type in('INDEX')order by deri_composite_code asc
+[2022-10-19 13:34:58] INFO [main] AppConfig.configureDefaultServletHandling(35) | ====Context start application org.springframework.jdbc.datasource.DriverManagerDataSource@7adae08e
+[2022-10-19 13:34:58] INFO [main] AppConfig.createTable(74) | ======TABLE derivative already exists !
+[2022-10-19 13:35:04] INFO [http-nio-8080-exec-1] DerivativeDAOImpl.list(76) | SELECT * FROM derivative where 1=1 
+[2022-10-19 13:35:33] INFO [http-nio-8080-exec-5] DerivativeDAOImpl.list(76) | SELECT * FROM derivative where 1=1 and underlying_type in('INDEX')order by deri_composite_code asc
+[2022-10-19 13:41:40] INFO [main] AppConfig.configureDefaultServletHandling(35) | ====Context start application org.springframework.jdbc.datasource.DriverManagerDataSource@5a48d186
+[2022-10-19 13:41:40] INFO [main] AppConfig.createTable(74) | ======TABLE derivative already exists !
+[2022-10-19 13:41:45] INFO [http-nio-8080-exec-1] DerivativeDAOImpl.list(96) | SELECT * FROM derivative where 1=1 and underlying_type in('INDEX')order by deri_composite_code asc
+[2022-10-19 13:51:51] INFO [main] AppConfig.configureDefaultServletHandling(35) | ====Context start application org.springframework.jdbc.datasource.DriverManagerDataSource@521ba38f
+[2022-10-19 13:51:51] INFO [main] AppConfig.createTable(74) | ======TABLE derivative already exists !
+[2022-10-19 13:51:56] INFO [http-nio-8080-exec-1] DerivativeDAOImpl.list(98) | SELECT * FROM derivative where 1=1 and underlying_type in('INDEX')order by deri_composite_code asc
+[2022-10-19 13:51:57] INFO [http-nio-8080-exec-2] DerivativeDAOImpl.list(98) | SELECT * FROM derivative where 1=1 and underlying_type in('INDEX')order by deri_composite_code asc
+[2022-10-19 13:52:04] INFO [http-nio-8080-exec-5] DerivativeDAOImpl.list(98) | SELECT * FROM derivative where 1=1 and underlying_type in('INDEX')order by deri_composite_code asc
+[2022-10-19 13:52:17] INFO [http-nio-8080-exec-8] DerivativeDAOImpl.list(98) | SELECT * FROM derivative where 1=1 and underlying_type in('INDEX')order by deri_composite_code asc
+[2022-10-19 13:53:10] INFO [main] AppConfig.configureDefaultServletHandling(35) | ====Context start application org.springframework.jdbc.datasource.DriverManagerDataSource@5a48d186
+[2022-10-19 13:53:11] INFO [main] AppConfig.createTable(74) | ======TABLE derivative already exists !
+[2022-10-19 13:53:17] INFO [http-nio-8080-exec-1] DerivativeDAOImpl.list(97) | SELECT * FROM derivative where 1=1 
+[2022-10-19 13:53:51] INFO [http-nio-8080-exec-3] DerivativeDAOImpl.list(97) | SELECT * FROM derivative where 1=1 order by deri_composite_code asc
+[2022-10-19 13:54:01] INFO [http-nio-8080-exec-5] DerivativeDAOImpl.list(97) | SELECT * FROM derivative where 1=1 order by deri_composite_code asc
+[2022-10-19 13:54:13] INFO [http-nio-8080-exec-6] DerivativeDAOImpl.list(97) | SELECT * FROM derivative where 1=1 order by deri_composite_code asc
+[2022-10-19 13:54:26] INFO [http-nio-8080-exec-7] DerivativeDAOImpl.list(97) | SELECT * FROM derivative where 1=1 order by deri_composite_code asc
+[2022-10-19 13:54:29] INFO [http-nio-8080-exec-8] DerivativeDAOImpl.list(97) | SELECT * FROM derivative where 1=1 order by deri_composite_code asc
+[2022-10-19 13:54:31] INFO [http-nio-8080-exec-9] DerivativeDAOImpl.list(97) | SELECT * FROM derivative where 1=1 order by deri_composite_code asc
+[2022-10-19 13:54:42] INFO [http-nio-8080-exec-10] DerivativeDAOImpl.list(97) | SELECT * FROM derivative where 1=1 order by deri_composite_code asc
+[2022-10-19 13:54:57] INFO [http-nio-8080-exec-4] DerivativeDAOImpl.list(97) | SELECT * FROM derivative where 1=1 order by deri_composite_code asc
+[2022-10-19 13:55:19] INFO [http-nio-8080-exec-2] DerivativeDAOImpl.list(97) | SELECT * FROM derivative where 1=1 order by deri_composite_code asc
+[2022-10-19 13:55:22] INFO [http-nio-8080-exec-3] DerivativeDAOImpl.list(97) | SELECT * FROM derivative where 1=1 order by deri_composite_code asc
+[2022-10-19 13:55:22] INFO [http-nio-8080-exec-5] DerivativeDAOImpl.list(97) | SELECT * FROM derivative where 1=1 order by deri_composite_code asc
+[2022-10-19 13:55:23] INFO [http-nio-8080-exec-6] DerivativeDAOImpl.list(97) | SELECT * FROM derivative where 1=1 order by deri_composite_code asc
+[2022-10-19 13:57:44] INFO [main] AppConfig.configureDefaultServletHandling(35) | ====Context start application org.springframework.jdbc.datasource.DriverManagerDataSource@521ba38f
+[2022-10-19 13:57:44] INFO [main] AppConfig.createTable(74) | ======TABLE derivative already exists !
+[2022-10-19 13:57:54] INFO [http-nio-8080-exec-1] DerivativeDAOImpl.list(97) | SELECT * FROM derivative where 1=1 
+[2022-10-19 13:59:09] INFO [main] AppConfig.configureDefaultServletHandling(35) | ====Context start application org.springframework.jdbc.datasource.DriverManagerDataSource@5a48d186
+[2022-10-19 13:59:09] INFO [main] AppConfig.createTable(74) | ======TABLE derivative already exists !
+[2022-10-19 13:59:12] INFO [http-nio-8080-exec-1] DerivativeDAOImpl.list(97) | SELECT * FROM derivative where 1=1 
+[2022-10-19 14:03:59] INFO [main] AppConfig.configureDefaultServletHandling(35) | ====Context start application org.springframework.jdbc.datasource.DriverManagerDataSource@2086d469
+[2022-10-19 14:03:59] INFO [main] AppConfig.createTable(74) | ======TABLE derivative already exists !
+[2022-10-19 14:04:02] INFO [http-nio-8080-exec-1] DerivativeDAOImpl.list(97) | SELECT * FROM derivative where 1=1 
+[2022-10-19 14:04:27] INFO [http-nio-8080-exec-4] DerivativeDAOImpl.list(97) | SELECT * FROM derivative where 1=1 and underlying_type in('INDEX')order by deri_composite_code asc
+[2022-10-19 14:04:44] INFO [http-nio-8080-exec-7] DerivativeDAOImpl.list(97) | SELECT * FROM derivative where 1=1 and underlying_type in('INDEX')order by deri_composite_code asc
+[2022-10-19 14:05:39] INFO [main] AppConfig.configureDefaultServletHandling(35) | ====Context start application org.springframework.jdbc.datasource.DriverManagerDataSource@2086d469
+[2022-10-19 14:05:39] INFO [main] AppConfig.createTable(74) | ======TABLE derivative already exists !
+[2022-10-19 14:05:43] INFO [http-nio-8080-exec-1] DerivativeDAOImpl.list(97) | SELECT * FROM derivative where 1=1 and underlying_type in('INDEX')order by deri_composite_code asc
+[2022-10-19 14:05:43] INFO [http-nio-8080-exec-1] DerivativeDAOImpl.list(97) | SELECT * FROM derivative where 1=1 and underlying_type in('INDEX')order by deri_composite_code asc
+[2022-10-19 14:06:02] INFO [http-nio-8080-exec-7] DerivativeDAOImpl.list(97) | SELECT * FROM derivative where 1=1 and underlying_type in('INDEX')order by deri_composite_code asc
+[2022-10-19 14:06:02] INFO [http-nio-8080-exec-7] DerivativeDAOImpl.list(97) | SELECT * FROM derivative where 1=1 and underlying_type in('INDEX')order by deri_composite_code asc
+[2022-10-19 14:06:22] INFO [http-nio-8080-exec-4] DerivativeDAOImpl.list(97) | SELECT * FROM derivative where 1=1 and underlying_type in('INDEX')order by deri_composite_code asc
+[2022-10-19 14:06:22] INFO [http-nio-8080-exec-4] DerivativeDAOImpl.list(97) | SELECT * FROM derivative where 1=1 and underlying_type in('INDEX')order by deri_composite_code asc
+[2022-10-19 14:06:25] INFO [http-nio-8080-exec-5] DerivativeDAOImpl.list(97) | SELECT * FROM derivative where 1=1 and underlying_type in('INDEX')order by deri_composite_code asc
+[2022-10-19 14:06:25] INFO [http-nio-8080-exec-5] DerivativeDAOImpl.list(97) | SELECT * FROM derivative where 1=1 and underlying_type in('INDEX')order by deri_composite_code asc
+[2022-10-19 14:06:41] INFO [http-nio-8080-exec-1] DerivativeDAOImpl.list(97) | SELECT * FROM derivative where 1=1 and underlying_type in('INDEX')order by deri_composite_code asc
+[2022-10-19 14:06:41] INFO [http-nio-8080-exec-1] DerivativeDAOImpl.list(97) | SELECT * FROM derivative where 1=1 and underlying_type in('INDEX')order by deri_composite_code asc
+[2022-10-19 14:06:45] INFO [http-nio-8080-exec-2] DerivativeDAOImpl.list(97) | SELECT * FROM derivative where 1=1 and underlying_type in('INDEX')order by deri_composite_code asc
+[2022-10-19 14:06:45] INFO [http-nio-8080-exec-2] DerivativeDAOImpl.list(97) | SELECT * FROM derivative where 1=1 and underlying_type in('INDEX')order by deri_composite_code asc
+[2022-10-19 14:07:01] INFO [http-nio-8080-exec-8] DerivativeDAOImpl.list(97) | SELECT * FROM derivative where 1=1 and underlying_type in('INDEX')order by deri_composite_code asc
+[2022-10-19 14:07:01] INFO [http-nio-8080-exec-8] DerivativeDAOImpl.list(97) | SELECT * FROM derivative where 1=1 and underlying_type in('INDEX')order by deri_composite_code asc
+[2022-10-19 14:07:24] INFO [main] AppConfig.configureDefaultServletHandling(35) | ====Context start application org.springframework.jdbc.datasource.DriverManagerDataSource@2086d469
+[2022-10-19 14:07:24] INFO [main] AppConfig.createTable(74) | ======TABLE derivative already exists !
+[2022-10-19 14:07:28] INFO [http-nio-8080-exec-1] DerivativeDAOImpl.list(97) | SELECT * FROM derivative where 1=1 and underlying_type in('INDEX')order by deri_composite_code asc
+[2022-10-19 14:10:54] INFO [main] AppConfig.configureDefaultServletHandling(35) | ====Context start application org.springframework.jdbc.datasource.DriverManagerDataSource@49c83262
+[2022-10-19 14:10:54] INFO [main] AppConfig.createTable(74) | ======TABLE derivative already exists !
+[2022-10-19 14:10:56] INFO [http-nio-8080-exec-1] DerivativeDAOImpl.list(97) | SELECT * FROM derivative where 1=1 and underlying_type in('INDEX')order by deri_composite_code asc
+[2022-10-19 14:10:56] INFO [http-nio-8080-exec-1] DerivativeDAOImpl.list(97) | SELECT * FROM derivative where 1=1 and underlying_type in('INDEX')order by deri_composite_code asc
+[2022-10-19 14:11:06] INFO [http-nio-8080-exec-2] DerivativeDAOImpl.list(97) | SELECT * FROM derivative where 1=1 and underlying_type in('INDEX')order by deri_composite_code asc
+[2022-10-19 14:11:06] INFO [http-nio-8080-exec-2] DerivativeDAOImpl.list(97) | SELECT * FROM derivative where 1=1 and underlying_type in('INDEX')order by deri_composite_code asc
+[2022-10-19 14:14:25] INFO [main] AppConfig.configureDefaultServletHandling(35) | ====Context start application org.springframework.jdbc.datasource.DriverManagerDataSource@2086d469
+[2022-10-19 14:14:25] INFO [main] AppConfig.createTable(74) | ======TABLE derivative already exists !
+[2022-10-19 14:14:25] INFO [http-nio-8080-exec-1] DerivativeDAOImpl.list(97) | SELECT * FROM derivative where 1=1 and underlying_type in('INDEX')order by deri_composite_code asc
+[2022-10-19 14:14:32] INFO [http-nio-8080-exec-5] DerivativeDAOImpl.list(97) | SELECT * FROM derivative where 1=1 and underlying_type in('INDEX')order by deri_composite_code asc
+[2022-10-19 14:14:34] INFO [http-nio-8080-exec-6] DerivativeDAOImpl.list(97) | SELECT * FROM derivative where 1=1 and underlying_type in('INDEX')order by deri_composite_code asc
+[2022-10-19 14:14:40] INFO [http-nio-8080-exec-9] DerivativeDAOImpl.list(97) | SELECT * FROM derivative where 1=1 and underlying_type in('INDEX')order by deri_composite_code asc
+[2022-10-19 14:14:49] INFO [http-nio-8080-exec-4] DerivativeDAOImpl.list(97) | SELECT * FROM derivative where 1=1 and underlying_type in('INDEX')order by deri_composite_code asc
+[2022-10-19 14:14:59] INFO [http-nio-8080-exec-5] DerivativeDAOImpl.list(97) | SELECT * FROM derivative where 1=1 and underlying_type in('INDEX')order by deri_composite_code asc
+[2022-10-19 14:15:15] INFO [http-nio-8080-exec-7] DerivativeDAOImpl.list(97) | SELECT * FROM derivative where 1=1 and underlying_type in('INDEX')order by deri_composite_code asc
+[2022-10-19 14:15:16] INFO [http-nio-8080-exec-9] DerivativeDAOImpl.list(97) | SELECT * FROM derivative where 1=1 and underlying_type in('INDEX')order by deri_composite_code asc
+[2022-10-19 14:15:16] INFO [http-nio-8080-exec-1] DerivativeDAOImpl.list(97) | SELECT * FROM derivative where 1=1 and underlying_type in('INDEX')order by deri_composite_code asc
+[2022-10-19 14:15:16] INFO [http-nio-8080-exec-10] DerivativeDAOImpl.list(97) | SELECT * FROM derivative where 1=1 and underlying_type in('INDEX')order by deri_composite_code asc
+[2022-10-19 14:15:16] INFO [http-nio-8080-exec-4] DerivativeDAOImpl.list(97) | SELECT * FROM derivative where 1=1 and underlying_type in('INDEX')order by deri_composite_code asc
+[2022-10-19 14:15:20] INFO [http-nio-8080-exec-5] DerivativeDAOImpl.list(97) | SELECT * FROM derivative where 1=1 and underlying_type in('INDEX')order by deri_composite_code asc
+[2022-10-19 14:15:36] INFO [http-nio-8080-exec-7] DerivativeDAOImpl.list(97) | SELECT * FROM derivative where 1=1 and underlying_type in('INDEX')order by deri_composite_code asc
+[2022-10-19 14:15:36] INFO [http-nio-8080-exec-9] DerivativeDAOImpl.list(97) | SELECT * FROM derivative where 1=1 and underlying_type in('INDEX')order by deri_composite_code asc
+[2022-10-19 14:15:40] INFO [http-nio-8080-exec-4] DerivativeDAOImpl.list(97) | SELECT * FROM derivative where 1=1 and underlying_type in('INDEX')order by deri_composite_code asc
+[2022-10-19 14:15:40] INFO [http-nio-8080-exec-2] DerivativeDAOImpl.list(97) | SELECT * FROM derivative where 1=1 and underlying_type in('INDEX')order by deri_composite_code asc
+[2022-10-19 14:15:40] INFO [http-nio-8080-exec-3] DerivativeDAOImpl.list(97) | SELECT * FROM derivative where 1=1 and underlying_type in('INDEX')order by deri_composite_code asc
+[2022-10-19 14:15:41] INFO [http-nio-8080-exec-5] DerivativeDAOImpl.list(97) | SELECT * FROM derivative where 1=1 and underlying_type in('INDEX')order by deri_composite_code asc
+[2022-10-19 14:15:41] INFO [http-nio-8080-exec-8] DerivativeDAOImpl.list(97) | SELECT * FROM derivative where 1=1 and underlying_type in('INDEX')order by deri_composite_code asc
+[2022-10-19 14:15:41] INFO [http-nio-8080-exec-6] DerivativeDAOImpl.list(97) | SELECT * FROM derivative where 1=1 and underlying_type in('INDEX')order by deri_composite_code asc
+[2022-10-19 14:15:41] INFO [http-nio-8080-exec-7] DerivativeDAOImpl.list(97) | SELECT * FROM derivative where 1=1 and underlying_type in('INDEX')order by deri_composite_code asc
+[2022-10-19 14:15:42] INFO [http-nio-8080-exec-9] DerivativeDAOImpl.list(97) | SELECT * FROM derivative where 1=1 and underlying_type in('INDEX')order by deri_composite_code asc
+[2022-10-19 14:15:42] INFO [http-nio-8080-exec-10] DerivativeDAOImpl.list(97) | SELECT * FROM derivative where 1=1 and underlying_type in('INDEX')order by deri_composite_code asc
+[2022-10-19 14:15:42] INFO [http-nio-8080-exec-1] DerivativeDAOImpl.list(97) | SELECT * FROM derivative where 1=1 and underlying_type in('INDEX')order by deri_composite_code asc
+[2022-10-19 14:15:47] INFO [http-nio-8080-exec-3] DerivativeDAOImpl.list(97) | SELECT * FROM derivative where 1=1 and underlying_type in('INDEX')order by deri_composite_code asc
+[2022-10-19 14:15:53] INFO [http-nio-8080-exec-5] DerivativeDAOImpl.list(97) | SELECT * FROM derivative where 1=1 and underlying_type in('INDEX')order by deri_composite_code asc
+[2022-10-19 14:15:54] INFO [http-nio-8080-exec-8] DerivativeDAOImpl.list(97) | SELECT * FROM derivative where 1=1 and underlying_type in('INDEX')order by deri_composite_code asc
+[2022-10-19 14:15:54] INFO [http-nio-8080-exec-6] DerivativeDAOImpl.list(97) | SELECT * FROM derivative where 1=1 and underlying_type in('INDEX')order by deri_composite_code asc
+[2022-10-19 14:15:54] INFO [http-nio-8080-exec-7] DerivativeDAOImpl.list(97) | SELECT * FROM derivative where 1=1 and underlying_type in('INDEX')order by deri_composite_code asc
+[2022-10-19 14:15:58] INFO [http-nio-8080-exec-1] DerivativeDAOImpl.list(97) | SELECT * FROM derivative where 1=1 and underlying_type in('INDEX')order by deri_composite_code asc
+[2022-10-19 14:15:58] INFO [http-nio-8080-exec-4] DerivativeDAOImpl.list(97) | SELECT * FROM derivative where 1=1 and underlying_type in('INDEX')order by deri_composite_code asc
+[2022-10-19 14:15:58] INFO [http-nio-8080-exec-2] DerivativeDAOImpl.list(97) | SELECT * FROM derivative where 1=1 and underlying_type in('INDEX')order by deri_composite_code asc
+[2022-10-19 14:15:58] INFO [http-nio-8080-exec-3] DerivativeDAOImpl.list(97) | SELECT * FROM derivative where 1=1 and underlying_type in('INDEX')order by deri_composite_code asc
+[2022-10-19 14:15:59] INFO [http-nio-8080-exec-5] DerivativeDAOImpl.list(97) | SELECT * FROM derivative where 1=1 and underlying_type in('INDEX')order by deri_composite_code asc
+[2022-10-19 14:15:59] INFO [http-nio-8080-exec-8] DerivativeDAOImpl.list(97) | SELECT * FROM derivative where 1=1 and underlying_type in('INDEX')order by deri_composite_code asc
+[2022-10-19 14:15:59] INFO [http-nio-8080-exec-6] DerivativeDAOImpl.list(97) | SELECT * FROM derivative where 1=1 and underlying_type in('INDEX')order by deri_composite_code asc
+[2022-10-19 14:15:59] INFO [http-nio-8080-exec-7] DerivativeDAOImpl.list(97) | SELECT * FROM derivative where 1=1 and underlying_type in('INDEX')order by deri_composite_code asc
+[2022-10-19 14:15:59] INFO [http-nio-8080-exec-10] DerivativeDAOImpl.list(97) | SELECT * FROM derivative where 1=1 and underlying_type in('INDEX')order by deri_composite_code asc
+[2022-10-19 14:15:59] INFO [http-nio-8080-exec-9] DerivativeDAOImpl.list(97) | SELECT * FROM derivative where 1=1 and underlying_type in('INDEX')order by deri_composite_code asc
+[2022-10-19 14:16:00] INFO [http-nio-8080-exec-1] DerivativeDAOImpl.list(97) | SELECT * FROM derivative where 1=1 and underlying_type in('INDEX')order by deri_composite_code asc
+[2022-10-19 14:16:00] INFO [http-nio-8080-exec-4] DerivativeDAOImpl.list(97) | SELECT * FROM derivative where 1=1 and underlying_type in('INDEX')order by deri_composite_code asc
+[2022-10-19 14:16:00] INFO [http-nio-8080-exec-2] DerivativeDAOImpl.list(97) | SELECT * FROM derivative where 1=1 and underlying_type in('INDEX')order by deri_composite_code asc
+[2022-10-19 14:16:03] INFO [http-nio-8080-exec-3] DerivativeDAOImpl.list(97) | SELECT * FROM derivative where 1=1 and underlying_type in('INDEX')order by deri_composite_code asc
+[2022-10-19 14:16:07] INFO [http-nio-8080-exec-6] DerivativeDAOImpl.list(97) | SELECT * FROM derivative where 1=1 and underlying_type in('INDEX')order by deri_composite_code asc
+[2022-10-19 14:16:07] INFO [http-nio-8080-exec-7] DerivativeDAOImpl.list(97) | SELECT * FROM derivative where 1=1 and underlying_type in('INDEX')order by deri_composite_code asc
+[2022-10-19 14:16:07] INFO [http-nio-8080-exec-10] DerivativeDAOImpl.list(97) | SELECT * FROM derivative where 1=1 and underlying_type in('INDEX')order by deri_composite_code asc
+[2022-10-19 14:16:07] INFO [http-nio-8080-exec-9] DerivativeDAOImpl.list(97) | SELECT * FROM derivative where 1=1 and underlying_type in('INDEX')order by deri_composite_code asc
+[2022-10-19 14:16:07] INFO [http-nio-8080-exec-1] DerivativeDAOImpl.list(97) | SELECT * FROM derivative where 1=1 and underlying_type in('INDEX')order by deri_composite_code asc
+[2022-10-19 14:16:07] INFO [http-nio-8080-exec-4] DerivativeDAOImpl.list(97) | SELECT * FROM derivative where 1=1 and underlying_type in('INDEX')order by deri_composite_code asc
+[2022-10-19 14:16:08] INFO [http-nio-8080-exec-2] DerivativeDAOImpl.list(97) | SELECT * FROM derivative where 1=1 and underlying_type in('INDEX')order by deri_composite_code asc
+[2022-10-19 14:16:08] INFO [http-nio-8080-exec-3] DerivativeDAOImpl.list(97) | SELECT * FROM derivative where 1=1 and underlying_type in('INDEX')order by deri_composite_code asc
+[2022-10-19 14:16:08] INFO [http-nio-8080-exec-8] DerivativeDAOImpl.list(97) | SELECT * FROM derivative where 1=1 and underlying_type in('INDEX')order by deri_composite_code asc

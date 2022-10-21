@@ -1,0 +1,179 @@
+[2022-10-13 10:49:38] INFO [main] AppConfig.configureDefaultServletHandling(34) | ====Context start application org.springframework.jdbc.datasource.DriverManagerDataSource@991cbde
+[2022-10-13 10:49:38] INFO [main] AppConfig.createTable(46) | ======TABLE HN_GROUP already exists !
+[2022-10-13 10:49:38] INFO [main] AppConfig.createTable(46) | ======TABLE HN_USER already exists !
+[2022-10-13 10:49:48] INFO [http-nio-8080-exec-1] UserRestServiceController.listUser(32) | 
+-------------> [ROLE_USER]
+[2022-10-13 10:50:09] INFO [http-nio-8080-exec-3] UserRestServiceController.listUser(32) | 
+-------------> [ROLE_USER]
+[2022-10-13 10:50:09] INFO [http-nio-8080-exec-4] UserRestServiceController.listUser(32) | 
+-------------> [ROLE_USER]
+[2022-10-13 10:53:39] INFO [main] AppConfig.configureDefaultServletHandling(34) | ====Context start application org.springframework.jdbc.datasource.DriverManagerDataSource@78d71df1
+[2022-10-13 10:53:39] INFO [main] AppConfig.createTable(46) | ======TABLE HN_GROUP already exists !
+[2022-10-13 10:53:39] INFO [main] AppConfig.createTable(46) | ======TABLE HN_USER already exists !
+[2022-10-13 10:53:50] INFO [http-nio-8080-exec-1] UserRestServiceController.listUser(33) | 
+-------------> [ROLE_USER]
+[2022-10-13 10:59:19] INFO [http-nio-8080-exec-5] UserRestServiceController.listUser(33) | 
+-------------> [ROLE_USER]
+[2022-10-13 11:01:14] INFO [main] AppConfig.configureDefaultServletHandling(34) | ====Context start application org.springframework.jdbc.datasource.DriverManagerDataSource@991cbde
+[2022-10-13 11:01:14] INFO [main] AppConfig.createTable(46) | ======TABLE HN_GROUP already exists !
+[2022-10-13 11:01:14] INFO [main] AppConfig.createTable(46) | ======TABLE HN_USER already exists !
+[2022-10-13 11:07:11] INFO [main] AppConfig.configureDefaultServletHandling(34) | ====Context start application org.springframework.jdbc.datasource.DriverManagerDataSource@991cbde
+[2022-10-13 11:07:11] INFO [main] AppConfig.createTable(46) | ======TABLE HN_GROUP already exists !
+[2022-10-13 11:07:11] INFO [main] AppConfig.createTable(46) | ======TABLE HN_USER already exists !
+[2022-10-13 11:09:23] INFO [main] AppConfig.configureDefaultServletHandling(34) | ====Context start application org.springframework.jdbc.datasource.DriverManagerDataSource@2dbc408c
+[2022-10-13 11:09:24] INFO [main] AppConfig.createTable(46) | ======TABLE HN_GROUP already exists !
+[2022-10-13 11:09:24] INFO [main] AppConfig.createTable(46) | ======TABLE HN_USER already exists !
+[2022-10-13 11:09:49] INFO [http-nio-8080-exec-3] UserRestServiceController.listUser(31) | 
+-------------> [ROLE_USER]
+[2022-10-13 11:10:28] INFO [main] AppConfig.configureDefaultServletHandling(34) | ====Context start application org.springframework.jdbc.datasource.DriverManagerDataSource@2dbc408c
+[2022-10-13 11:10:28] INFO [main] AppConfig.createTable(46) | ======TABLE HN_GROUP already exists !
+[2022-10-13 11:10:28] INFO [main] AppConfig.createTable(46) | ======TABLE HN_USER already exists !
+[2022-10-13 11:10:33] INFO [http-nio-8080-exec-1] UserRestServiceController.listUser(31) | 
+-------------> [ROLE_USER]
+[2022-10-13 11:10:44] INFO [http-nio-8080-exec-2] UserRestServiceController.listUser(31) | 
+-------------> [ROLE_ADMIN, ROLE_USER]
+[2022-10-13 11:14:08] INFO [main] AppConfig.configureDefaultServletHandling(34) | ====Context start application org.springframework.jdbc.datasource.DriverManagerDataSource@d499c13
+[2022-10-13 11:14:08] INFO [main] AppConfig.createTable(46) | ======TABLE HN_GROUP already exists !
+[2022-10-13 11:14:08] INFO [main] AppConfig.createTable(46) | ======TABLE HN_USER already exists !
+[2022-10-13 11:14:33] INFO [http-nio-8080-exec-3] UserRestServiceController.listUser(33) | 
+-------------> [ROLE_ADMIN, ROLE_USER]
+[2022-10-13 11:16:10] INFO [main] AppConfig.configureDefaultServletHandling(34) | ====Context start application org.springframework.jdbc.datasource.DriverManagerDataSource@33188612
+[2022-10-13 11:16:10] INFO [main] AppConfig.createTable(46) | ======TABLE HN_GROUP already exists !
+[2022-10-13 11:16:10] INFO [main] AppConfig.createTable(46) | ======TABLE HN_USER already exists !
+[2022-10-13 11:16:39] INFO [http-nio-8080-exec-3] UserRestServiceController.listUser(35) | 
+-------------> [ROLE_ADMIN, ROLE_USER]
+[2022-10-13 11:20:51] INFO [main] AppConfig.configureDefaultServletHandling(34) | ====Context start application org.springframework.jdbc.datasource.DriverManagerDataSource@5e5beb8a
+[2022-10-13 11:20:51] INFO [main] AppConfig.createTable(46) | ======TABLE HN_GROUP already exists !
+[2022-10-13 11:20:51] INFO [main] AppConfig.createTable(46) | ======TABLE HN_USER already exists !
+[2022-10-13 11:21:03] INFO [http-nio-8080-exec-1] UserRestServiceController.listUser(36) | 
+-------------> [ROLE_USER]
+[2022-10-13 11:21:17] INFO [http-nio-8080-exec-2] UserRestServiceController.listUser(36) | 
+-------------> [ROLE_ADMIN, ROLE_USER]
+[2022-10-13 11:21:17] INFO [http-nio-8080-exec-2] HNServicePermissionEvaluator.hasPermission(17) | -----> edu.hanoi.service.model.User@4d72b182 : read
+[2022-10-13 11:21:17] INFO [http-nio-8080-exec-2] HNServicePermissionEvaluator.hasPermission(17) | -----> edu.hanoi.service.model.User@5861c29d : read
+[2022-10-13 11:21:17] INFO [http-nio-8080-exec-2] HNServicePermissionEvaluator.hasPermission(17) | -----> edu.hanoi.service.model.User@24a772f8 : read
+[2022-10-13 11:21:17] INFO [http-nio-8080-exec-2] HNServicePermissionEvaluator.hasPermission(17) | -----> edu.hanoi.service.model.User@14c3ed77 : read
+[2022-10-13 11:21:17] INFO [http-nio-8080-exec-2] HNServicePermissionEvaluator.hasPermission(17) | -----> edu.hanoi.service.model.User@384b18ac : read
+[2022-10-13 11:21:17] INFO [http-nio-8080-exec-2] HNServicePermissionEvaluator.hasPermission(17) | -----> edu.hanoi.service.model.User@6e685012 : read
+[2022-10-13 11:21:17] INFO [http-nio-8080-exec-2] HNServicePermissionEvaluator.hasPermission(17) | -----> edu.hanoi.service.model.User@7147cf95 : read
+[2022-10-13 11:21:17] INFO [http-nio-8080-exec-2] HNServicePermissionEvaluator.hasPermission(17) | -----> edu.hanoi.service.model.User@7a642c9f : read
+[2022-10-13 11:21:17] INFO [http-nio-8080-exec-2] HNServicePermissionEvaluator.hasPermission(17) | -----> edu.hanoi.service.model.User@1a0ad507 : read
+[2022-10-13 11:21:17] INFO [http-nio-8080-exec-2] HNServicePermissionEvaluator.hasPermission(17) | -----> edu.hanoi.service.model.User@364eee94 : read
+[2022-10-13 11:21:17] INFO [http-nio-8080-exec-2] HNServicePermissionEvaluator.hasPermission(17) | -----> edu.hanoi.service.model.User@79bab4af : read
+[2022-10-13 11:21:17] INFO [http-nio-8080-exec-2] HNServicePermissionEvaluator.hasPermission(17) | -----> edu.hanoi.service.model.User@22e17fd3 : read
+[2022-10-13 11:21:17] INFO [http-nio-8080-exec-2] HNServicePermissionEvaluator.hasPermission(17) | -----> edu.hanoi.service.model.User@6e8f2465 : read
+[2022-10-13 11:21:17] INFO [http-nio-8080-exec-2] HNServicePermissionEvaluator.hasPermission(17) | -----> edu.hanoi.service.model.User@2ff45d6e : read
+[2022-10-13 11:21:17] INFO [http-nio-8080-exec-2] HNServicePermissionEvaluator.hasPermission(17) | -----> edu.hanoi.service.model.User@3c78bf3 : read
+[2022-10-13 11:21:17] INFO [http-nio-8080-exec-2] HNServicePermissionEvaluator.hasPermission(17) | -----> edu.hanoi.service.model.User@2a7173bf : read
+[2022-10-13 11:21:17] INFO [http-nio-8080-exec-2] HNServicePermissionEvaluator.hasPermission(17) | -----> edu.hanoi.service.model.User@3dcac698 : read
+[2022-10-13 11:21:17] INFO [http-nio-8080-exec-2] HNServicePermissionEvaluator.hasPermission(17) | -----> edu.hanoi.service.model.User@3058e362 : read
+[2022-10-13 11:21:17] INFO [http-nio-8080-exec-2] HNServicePermissionEvaluator.hasPermission(17) | -----> edu.hanoi.service.model.User@fff6e89 : read
+[2022-10-13 11:21:17] INFO [http-nio-8080-exec-2] HNServicePermissionEvaluator.hasPermission(17) | -----> edu.hanoi.service.model.User@2e320842 : read
+[2022-10-13 11:21:17] INFO [http-nio-8080-exec-2] HNServicePermissionEvaluator.hasPermission(17) | -----> edu.hanoi.service.model.User@4527f51a : read
+[2022-10-13 11:21:17] INFO [http-nio-8080-exec-2] HNServicePermissionEvaluator.hasPermission(17) | -----> edu.hanoi.service.model.User@32935d2f : read
+[2022-10-13 11:21:17] INFO [http-nio-8080-exec-2] HNServicePermissionEvaluator.hasPermission(17) | -----> edu.hanoi.service.model.User@46ecf6d2 : read
+[2022-10-13 11:21:17] INFO [http-nio-8080-exec-2] HNServicePermissionEvaluator.hasPermission(17) | -----> edu.hanoi.service.model.User@78228655 : read
+[2022-10-13 11:21:17] INFO [http-nio-8080-exec-2] HNServicePermissionEvaluator.hasPermission(17) | -----> edu.hanoi.service.model.User@257236e : read
+[2022-10-13 11:21:17] INFO [http-nio-8080-exec-2] HNServicePermissionEvaluator.hasPermission(17) | -----> edu.hanoi.service.model.User@2a856c2e : read
+[2022-10-13 11:21:17] INFO [http-nio-8080-exec-2] HNServicePermissionEvaluator.hasPermission(17) | -----> edu.hanoi.service.model.User@b7e55ca : read
+[2022-10-13 11:21:17] INFO [http-nio-8080-exec-2] HNServicePermissionEvaluator.hasPermission(17) | -----> edu.hanoi.service.model.User@67027ade : read
+[2022-10-13 11:21:17] INFO [http-nio-8080-exec-2] HNServicePermissionEvaluator.hasPermission(17) | -----> edu.hanoi.service.model.User@5c757903 : read
+[2022-10-13 11:21:17] INFO [http-nio-8080-exec-2] HNServicePermissionEvaluator.hasPermission(17) | -----> edu.hanoi.service.model.User@5d909abf : read
+[2022-10-13 11:21:17] INFO [http-nio-8080-exec-2] HNServicePermissionEvaluator.hasPermission(17) | -----> edu.hanoi.service.model.User@243954c2 : read
+[2022-10-13 11:21:17] INFO [http-nio-8080-exec-2] HNServicePermissionEvaluator.hasPermission(17) | -----> edu.hanoi.service.model.User@50191e11 : read
+[2022-10-13 11:21:17] INFO [http-nio-8080-exec-2] HNServicePermissionEvaluator.hasPermission(17) | -----> edu.hanoi.service.model.User@27d3c870 : read
+[2022-10-13 11:21:17] INFO [http-nio-8080-exec-2] HNServicePermissionEvaluator.hasPermission(17) | -----> edu.hanoi.service.model.User@7ecfeb57 : read
+[2022-10-13 11:21:17] INFO [http-nio-8080-exec-2] HNServicePermissionEvaluator.hasPermission(17) | -----> edu.hanoi.service.model.User@103e3f08 : read
+[2022-10-13 11:21:17] INFO [http-nio-8080-exec-2] HNServicePermissionEvaluator.hasPermission(17) | -----> edu.hanoi.service.model.User@84f4288 : read
+[2022-10-13 11:21:17] INFO [http-nio-8080-exec-2] HNServicePermissionEvaluator.hasPermission(17) | -----> edu.hanoi.service.model.User@31668bb9 : read
+[2022-10-13 11:21:17] INFO [http-nio-8080-exec-2] HNServicePermissionEvaluator.hasPermission(17) | -----> edu.hanoi.service.model.User@30f24b91 : read
+[2022-10-13 11:21:17] INFO [http-nio-8080-exec-2] HNServicePermissionEvaluator.hasPermission(17) | -----> edu.hanoi.service.model.User@51d5f4f8 : read
+[2022-10-13 11:21:17] INFO [http-nio-8080-exec-2] HNServicePermissionEvaluator.hasPermission(17) | -----> edu.hanoi.service.model.User@237cb748 : read
+[2022-10-13 11:21:17] INFO [http-nio-8080-exec-2] HNServicePermissionEvaluator.hasPermission(17) | -----> edu.hanoi.service.model.User@2642cbdd : read
+[2022-10-13 11:21:17] INFO [http-nio-8080-exec-2] HNServicePermissionEvaluator.hasPermission(17) | -----> edu.hanoi.service.model.User@44ea247 : read
+[2022-10-13 11:21:17] INFO [http-nio-8080-exec-2] HNServicePermissionEvaluator.hasPermission(17) | -----> edu.hanoi.service.model.User@7a42f402 : read
+[2022-10-13 11:21:17] INFO [http-nio-8080-exec-2] HNServicePermissionEvaluator.hasPermission(17) | -----> edu.hanoi.service.model.User@3c42daf5 : read
+[2022-10-13 11:21:17] INFO [http-nio-8080-exec-2] HNServicePermissionEvaluator.hasPermission(17) | -----> edu.hanoi.service.model.User@c6ee283 : read
+[2022-10-13 11:21:17] INFO [http-nio-8080-exec-2] HNServicePermissionEvaluator.hasPermission(17) | -----> edu.hanoi.service.model.User@7dc325d3 : read
+[2022-10-13 11:21:17] INFO [http-nio-8080-exec-2] HNServicePermissionEvaluator.hasPermission(17) | -----> edu.hanoi.service.model.User@10cc3c8d : read
+[2022-10-13 11:21:17] INFO [http-nio-8080-exec-2] HNServicePermissionEvaluator.hasPermission(17) | -----> edu.hanoi.service.model.User@3a73d913 : read
+[2022-10-13 11:21:17] INFO [http-nio-8080-exec-2] HNServicePermissionEvaluator.hasPermission(17) | -----> edu.hanoi.service.model.User@41725e24 : read
+[2022-10-13 11:21:17] INFO [http-nio-8080-exec-2] HNServicePermissionEvaluator.hasPermission(17) | -----> edu.hanoi.service.model.User@257b0664 : read
+[2022-10-13 11:21:17] INFO [http-nio-8080-exec-2] HNServicePermissionEvaluator.hasPermission(17) | -----> edu.hanoi.service.model.User@54226e12 : read
+[2022-10-13 11:21:17] INFO [http-nio-8080-exec-2] HNServicePermissionEvaluator.hasPermission(17) | -----> edu.hanoi.service.model.User@703d8ec4 : read
+[2022-10-13 11:21:17] INFO [http-nio-8080-exec-2] HNServicePermissionEvaluator.hasPermission(17) | -----> edu.hanoi.service.model.User@236d7d99 : read
+[2022-10-13 11:21:17] INFO [http-nio-8080-exec-2] HNServicePermissionEvaluator.hasPermission(17) | -----> edu.hanoi.service.model.User@5e5807b6 : read
+[2022-10-13 11:21:17] INFO [http-nio-8080-exec-2] HNServicePermissionEvaluator.hasPermission(17) | -----> edu.hanoi.service.model.User@19cdb091 : read
+[2022-10-13 11:21:17] INFO [http-nio-8080-exec-2] HNServicePermissionEvaluator.hasPermission(17) | -----> edu.hanoi.service.model.User@51a56c2 : read
+[2022-10-13 11:21:17] INFO [http-nio-8080-exec-2] HNServicePermissionEvaluator.hasPermission(17) | -----> edu.hanoi.service.model.User@4d53724d : read
+[2022-10-13 11:21:17] INFO [http-nio-8080-exec-2] HNServicePermissionEvaluator.hasPermission(17) | -----> edu.hanoi.service.model.User@5328a9e6 : read
+[2022-10-13 11:21:17] INFO [http-nio-8080-exec-2] HNServicePermissionEvaluator.hasPermission(17) | -----> edu.hanoi.service.model.User@2715d22a : read
+[2022-10-13 11:27:35] INFO [main] AppConfig.configureDefaultServletHandling(34) | ====Context start application org.springframework.jdbc.datasource.DriverManagerDataSource@4fb56bea
+[2022-10-13 11:27:35] INFO [main] AppConfig.createTable(46) | ======TABLE HN_GROUP already exists !
+[2022-10-13 11:27:35] INFO [main] AppConfig.createTable(46) | ======TABLE HN_USER already exists !
+[2022-10-13 11:27:42] INFO [http-nio-8080-exec-1] UserRestServiceController.listUser(36) | 
+-------------> [ROLE_USER]
+[2022-10-13 11:27:42] INFO [http-nio-8080-exec-1] HNServicePermissionEvaluator.hasPermission(17) | -----> edu.hanoi.service.model.User@69b05362 : read
+[2022-10-13 11:27:42] INFO [http-nio-8080-exec-1] HNServicePermissionEvaluator.hasPermission(17) | -----> edu.hanoi.service.model.User@47aff212 : read
+[2022-10-13 11:27:42] INFO [http-nio-8080-exec-1] HNServicePermissionEvaluator.hasPermission(17) | -----> edu.hanoi.service.model.User@43c35eae : read
+[2022-10-13 11:27:42] INFO [http-nio-8080-exec-1] HNServicePermissionEvaluator.hasPermission(17) | -----> edu.hanoi.service.model.User@2a8c00ad : read
+[2022-10-13 11:27:42] INFO [http-nio-8080-exec-1] HNServicePermissionEvaluator.hasPermission(17) | -----> edu.hanoi.service.model.User@340f0f8d : read
+[2022-10-13 11:27:42] INFO [http-nio-8080-exec-1] HNServicePermissionEvaluator.hasPermission(17) | -----> edu.hanoi.service.model.User@c88547c : read
+[2022-10-13 11:27:42] INFO [http-nio-8080-exec-1] HNServicePermissionEvaluator.hasPermission(17) | -----> edu.hanoi.service.model.User@55675d6d : read
+[2022-10-13 11:27:42] INFO [http-nio-8080-exec-1] HNServicePermissionEvaluator.hasPermission(17) | -----> edu.hanoi.service.model.User@1f24b604 : read
+[2022-10-13 11:27:42] INFO [http-nio-8080-exec-1] HNServicePermissionEvaluator.hasPermission(17) | -----> edu.hanoi.service.model.User@531bb10a : read
+[2022-10-13 11:27:42] INFO [http-nio-8080-exec-1] HNServicePermissionEvaluator.hasPermission(17) | -----> edu.hanoi.service.model.User@1dfe34a1 : read
+[2022-10-13 11:27:42] INFO [http-nio-8080-exec-1] HNServicePermissionEvaluator.hasPermission(17) | -----> edu.hanoi.service.model.User@721d8e46 : read
+[2022-10-13 11:27:42] INFO [http-nio-8080-exec-1] HNServicePermissionEvaluator.hasPermission(17) | -----> edu.hanoi.service.model.User@48338297 : read
+[2022-10-13 11:27:42] INFO [http-nio-8080-exec-1] HNServicePermissionEvaluator.hasPermission(17) | -----> edu.hanoi.service.model.User@46aee97a : read
+[2022-10-13 11:27:42] INFO [http-nio-8080-exec-1] HNServicePermissionEvaluator.hasPermission(17) | -----> edu.hanoi.service.model.User@2a199632 : read
+[2022-10-13 11:27:42] INFO [http-nio-8080-exec-1] HNServicePermissionEvaluator.hasPermission(17) | -----> edu.hanoi.service.model.User@34e84289 : read
+[2022-10-13 11:27:42] INFO [http-nio-8080-exec-1] HNServicePermissionEvaluator.hasPermission(17) | -----> edu.hanoi.service.model.User@609b49b9 : read
+[2022-10-13 11:27:42] INFO [http-nio-8080-exec-1] HNServicePermissionEvaluator.hasPermission(17) | -----> edu.hanoi.service.model.User@51cf89e9 : read
+[2022-10-13 11:27:42] INFO [http-nio-8080-exec-1] HNServicePermissionEvaluator.hasPermission(17) | -----> edu.hanoi.service.model.User@37812de4 : read
+[2022-10-13 11:27:42] INFO [http-nio-8080-exec-1] HNServicePermissionEvaluator.hasPermission(17) | -----> edu.hanoi.service.model.User@418bcd97 : read
+[2022-10-13 11:27:42] INFO [http-nio-8080-exec-1] HNServicePermissionEvaluator.hasPermission(17) | -----> edu.hanoi.service.model.User@7b67929e : read
+[2022-10-13 11:27:42] INFO [http-nio-8080-exec-1] HNServicePermissionEvaluator.hasPermission(17) | -----> edu.hanoi.service.model.User@56cadcda : read
+[2022-10-13 11:27:42] INFO [http-nio-8080-exec-1] HNServicePermissionEvaluator.hasPermission(17) | -----> edu.hanoi.service.model.User@689a35ea : read
+[2022-10-13 11:27:42] INFO [http-nio-8080-exec-1] HNServicePermissionEvaluator.hasPermission(17) | -----> edu.hanoi.service.model.User@7762ba1b : read
+[2022-10-13 11:27:42] INFO [http-nio-8080-exec-1] HNServicePermissionEvaluator.hasPermission(17) | -----> edu.hanoi.service.model.User@30d6350b : read
+[2022-10-13 11:27:42] INFO [http-nio-8080-exec-1] HNServicePermissionEvaluator.hasPermission(17) | -----> edu.hanoi.service.model.User@30fa03c7 : read
+[2022-10-13 11:27:42] INFO [http-nio-8080-exec-1] HNServicePermissionEvaluator.hasPermission(17) | -----> edu.hanoi.service.model.User@9f64557 : read
+[2022-10-13 11:27:42] INFO [http-nio-8080-exec-1] HNServicePermissionEvaluator.hasPermission(17) | -----> edu.hanoi.service.model.User@6ba68410 : read
+[2022-10-13 11:27:42] INFO [http-nio-8080-exec-1] HNServicePermissionEvaluator.hasPermission(17) | -----> edu.hanoi.service.model.User@6ad99a02 : read
+[2022-10-13 11:27:42] INFO [http-nio-8080-exec-1] HNServicePermissionEvaluator.hasPermission(17) | -----> edu.hanoi.service.model.User@a5d48a5 : read
+[2022-10-13 11:27:42] INFO [http-nio-8080-exec-1] HNServicePermissionEvaluator.hasPermission(17) | -----> edu.hanoi.service.model.User@31ba6844 : read
+[2022-10-13 11:27:42] INFO [http-nio-8080-exec-1] HNServicePermissionEvaluator.hasPermission(17) | -----> edu.hanoi.service.model.User@6e63ec67 : read
+[2022-10-13 11:27:42] INFO [http-nio-8080-exec-1] HNServicePermissionEvaluator.hasPermission(17) | -----> edu.hanoi.service.model.User@48cc6223 : read
+[2022-10-13 11:27:42] INFO [http-nio-8080-exec-1] HNServicePermissionEvaluator.hasPermission(17) | -----> edu.hanoi.service.model.User@283403ff : read
+[2022-10-13 11:27:42] INFO [http-nio-8080-exec-1] HNServicePermissionEvaluator.hasPermission(17) | -----> edu.hanoi.service.model.User@4a2eb6f5 : read
+[2022-10-13 11:27:42] INFO [http-nio-8080-exec-1] HNServicePermissionEvaluator.hasPermission(17) | -----> edu.hanoi.service.model.User@3b5f7b03 : read
+[2022-10-13 11:27:42] INFO [http-nio-8080-exec-1] HNServicePermissionEvaluator.hasPermission(17) | -----> edu.hanoi.service.model.User@1029cb31 : read
+[2022-10-13 11:27:42] INFO [http-nio-8080-exec-1] HNServicePermissionEvaluator.hasPermission(17) | -----> edu.hanoi.service.model.User@188a1930 : read
+[2022-10-13 11:27:42] INFO [http-nio-8080-exec-1] HNServicePermissionEvaluator.hasPermission(17) | -----> edu.hanoi.service.model.User@27ac8dca : read
+[2022-10-13 11:27:42] INFO [http-nio-8080-exec-1] HNServicePermissionEvaluator.hasPermission(17) | -----> edu.hanoi.service.model.User@676b6d5f : read
+[2022-10-13 11:27:42] INFO [http-nio-8080-exec-1] HNServicePermissionEvaluator.hasPermission(17) | -----> edu.hanoi.service.model.User@394552c0 : read
+[2022-10-13 11:27:42] INFO [http-nio-8080-exec-1] HNServicePermissionEvaluator.hasPermission(17) | -----> edu.hanoi.service.model.User@71ce8f41 : read
+[2022-10-13 11:27:42] INFO [http-nio-8080-exec-1] HNServicePermissionEvaluator.hasPermission(17) | -----> edu.hanoi.service.model.User@324f8e6f : read
+[2022-10-13 11:27:42] INFO [http-nio-8080-exec-1] HNServicePermissionEvaluator.hasPermission(17) | -----> edu.hanoi.service.model.User@e720cec : read
+[2022-10-13 11:27:42] INFO [http-nio-8080-exec-1] HNServicePermissionEvaluator.hasPermission(17) | -----> edu.hanoi.service.model.User@1db29cb0 : read
+[2022-10-13 11:27:42] INFO [http-nio-8080-exec-1] HNServicePermissionEvaluator.hasPermission(17) | -----> edu.hanoi.service.model.User@1883bcc0 : read
+[2022-10-13 11:27:42] INFO [http-nio-8080-exec-1] HNServicePermissionEvaluator.hasPermission(17) | -----> edu.hanoi.service.model.User@56717549 : read
+[2022-10-13 11:27:42] INFO [http-nio-8080-exec-1] HNServicePermissionEvaluator.hasPermission(17) | -----> edu.hanoi.service.model.User@487a1607 : read
+[2022-10-13 11:27:42] INFO [http-nio-8080-exec-1] HNServicePermissionEvaluator.hasPermission(17) | -----> edu.hanoi.service.model.User@412444a4 : read
+[2022-10-13 11:27:42] INFO [http-nio-8080-exec-1] HNServicePermissionEvaluator.hasPermission(17) | -----> edu.hanoi.service.model.User@444485fc : read
+[2022-10-13 11:27:42] INFO [http-nio-8080-exec-1] HNServicePermissionEvaluator.hasPermission(17) | -----> edu.hanoi.service.model.User@19c27b00 : read
+[2022-10-13 11:27:42] INFO [http-nio-8080-exec-1] HNServicePermissionEvaluator.hasPermission(17) | -----> edu.hanoi.service.model.User@1108c11 : read
+[2022-10-13 11:27:42] INFO [http-nio-8080-exec-1] HNServicePermissionEvaluator.hasPermission(17) | -----> edu.hanoi.service.model.User@62f2f9f3 : read
+[2022-10-13 11:27:42] INFO [http-nio-8080-exec-1] HNServicePermissionEvaluator.hasPermission(17) | -----> edu.hanoi.service.model.User@279fb34 : read
+[2022-10-13 11:27:42] INFO [http-nio-8080-exec-1] HNServicePermissionEvaluator.hasPermission(17) | -----> edu.hanoi.service.model.User@8e98a00 : read
+[2022-10-13 11:27:42] INFO [http-nio-8080-exec-1] HNServicePermissionEvaluator.hasPermission(17) | -----> edu.hanoi.service.model.User@d9cff08 : read
+[2022-10-13 11:27:42] INFO [http-nio-8080-exec-1] HNServicePermissionEvaluator.hasPermission(17) | -----> edu.hanoi.service.model.User@7854a229 : read
+[2022-10-13 11:27:42] INFO [http-nio-8080-exec-1] HNServicePermissionEvaluator.hasPermission(17) | -----> edu.hanoi.service.model.User@35b9464c : read
+[2022-10-13 11:27:42] INFO [http-nio-8080-exec-1] HNServicePermissionEvaluator.hasPermission(17) | -----> edu.hanoi.service.model.User@71446371 : read
+[2022-10-13 11:27:42] INFO [http-nio-8080-exec-1] HNServicePermissionEvaluator.hasPermission(17) | -----> edu.hanoi.service.model.User@1bcaa6ee : read
+[2022-10-13 11:33:11] INFO [main] AppConfig.configureDefaultServletHandling(34) | ====Context start application org.springframework.jdbc.datasource.DriverManagerDataSource@4fb56bea
+[2022-10-13 11:33:11] INFO [main] AppConfig.createTable(46) | ======TABLE HN_GROUP already exists !
+[2022-10-13 11:33:11] INFO [main] AppConfig.createTable(46) | ======TABLE HN_USER already exists !
+[2022-10-13 11:33:21] INFO [http-nio-8080-exec-1] UserRestServiceController.listUser(36) | 
+-------------> [ROLE_USER]

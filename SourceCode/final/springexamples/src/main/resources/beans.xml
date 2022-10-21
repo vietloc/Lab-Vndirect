@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	   xmlns:context="http://www.springframework.org/schema/context"
+	   xmlns:jdbc="http://www.springframework.org/schema/jdbc"
+
+	   xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans-4.2.xsd
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context-4.2.xsd
+        http://www.springframework.org/schema/jdbc
+		http://www.springframework.org/schema/jdbc/spring-jdbc-4.2.xsd
+        http://springframework.org/schema/tx
+        http://springframework.org/schema/tx/spring-tx-4.2.xsd"
+>
+
+	<context:annotation-config></context:annotation-config>
+<!--	<bean id="helloJavaClazz2" class="edu.java.spring.HelloClazz" init-method="initMessage">-->
+<!--		<constructor-arg ref="helloJavaClazz"/>-->
+<!--	</bean>-->
+<!--	<bean class="edu.java.spring.InitSampleBean"/>-->
+<!--	<bean id="helloWorld" class="edu.java.spring.HelloWorld"/>-->
+<!--	<bean id="helloJavaClazz" class="edu.java.spring.HelloClazz">-->
+<!--		<property name="message" value="Hello Sub Bean!"/>-->
+<!--	</bean>-->
+<!--	<bean id="helloWorld" class="edu.java.spring.HelloWorld" parent="helloJavaClazz"/>-->
+<!--	<bean id="sampleTemplate" abstract="true">-->
+<!--		<property name="message" value="Template say Hello!"/>-->
+<!--	</bean>-->
+<!--	<bean id="helloWorld" class="edu.java.spring.HelloWorld" parent="sampleTemplate"/>-->
+<!--	<bean id="helloWorld" class="edu.java.spring.HelloWorld">-->
+<!--&lt;!&ndash;		<constructor-arg type="java.lang.String" value="Loc/"/>&ndash;&gt;-->
+<!--		<constructor-arg index="0" value="Loc/"/>-->
+<!--		<constructor-arg ref="helloJavaClazz"/>-->
+<!--	</bean>-->
+<!--	<bean id="helloJavaClazz" class="edu.java.spring.HelloClazz">-->
+<!--		<property name="message" value="Hello Bean Inheritance" />-->
+<!--	</bean>-->
+<!--	<bean id="helloWorld" class="edu.java.spring.HelloWorld">-->
+<!--		<property name="clazz">-->
+<!--			<bean id="helloJavClazz" class="edu.java.spring.HelloClazz">-->
+<!--				<property name="message" value="Hello Class Instance is Inner Bean!"/>-->
+<!--			</bean>-->
+<!--		</property>-->
+<!--	</bean>-->
+<!--	<bean id="jee01" class="edu.java.spring.JavaClazz">-->
+<!--		<property name="students">-->
+<!--			<map>-->
+<!--				<entry key="Nguyen Van A" value="23" />-->
+<!--				<entry key="Tran Thi B" value="18" />-->
+<!--				<entry key="Le Thi C" value="27" />-->
+<!--				<entry key="Hoang Van D" value="34" />-->
+<!--			</map>-->
+<!--		</property>-->
+<!--	</bean>-->
+<!--	<bean id="helloJavaClazz" class="edu.java.spring.HelloClazz">-->
+<!--		<property name="clazzes">-->
+<!--			<list>-->
+<!--				<ref bean="jee01"/>-->
+<!--				<null/>-->
+<!--			</list>-->
+<!--		</property>-->
+<!--	</bean>-->
+<!--	<bean id="helloWorld" class="edu.java.spring.HelloWorld">-->
+<!--		<property name="clazz">-->
+<!--			<bean id="helloJavaClazz" class="edu.java.spring.HelloClazz">-->
+<!--				<property name="message" value="Hello Class Instance is Inner Bean!"/>-->
+<!--			</bean>-->
+<!--		</property>-->
+<!--	</bean>-->
+<!--	<bean id="helloWorld" class="edu.java.spring.HelloWorld" autowire="byName"/>-->
+<!--	<bean id="clazz" class="edu.java.spring.HelloClazz">-->
+<!--	</bean>-->
+<!--	<bean id="helloWorld" class="edu.java.spring.HelloWorld" autowire="byType">-->
+<!--		<property name="message" value="Hello Annotation based Configuration!"/>-->
+<!--	</bean>-->
+<!--	<bean id="helloJavaClazz" class="edu.java.spring.HelloClazz">-->
+
+<!--	</bean>-->
+<!--	<bean id="helloJavaClazz2" class="edu.java.spring.HelloClazz">-->
+<!--		<property name="message" value="Hello Bean Inheritance!"/>-->
+<!--	</bean>-->
+<!--	<bean id="helloJavaClazz" class="edu.java.spring.HelloClazz">-->
+<!--		<property name="message" value="Hello Bean Inheritance!"/>-->
+<!--	</bean>-->
+<!--	<bean id="startEventHandler" class="edu.java.spring.ContextStartHandler"/>-->
+
+	<bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+		<property name="driverClassName" value="org.apache.derby.jdbc.EmbeddedDriver"/>
+		<property name="url" value="jdbc:derby:C:/Java/sampledb2;create=true"/>
+		<property name="username" value=""/>
+		<property name="password" value=""/>
+   	</bean>
+<!--	<bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">-->
+<!--		<property name="driverClassName" value="org.apache.derby.jdbc.EmbeddedDriver"/>-->
+<!--		<property name="url" value="jdbc:derby:C:/Java/sampledb;create=true"/>-->
+<!--		<property name="username" value=""/>-->
+<!--		<property name="password" value=""/>-->
+<!--	</bean>-->
+
+	<jdbc:embedded-database type="DERBY" id="dataSource">
+		<jdbc:script location="classpath:schema.sql"/>
+	</jdbc:embedded-database>
+
+<!--	<bean id="studentJdbcDAO" class="jdbc.StudentJdbcDAO" init-method="createTableIfNotExist">-->
+<!--		<property name="dataSource" ref="dataSource"/>-->
+<!--	</bean>-->
+	<bean id="studentJdbcDAO" class="jdbc.StudentJdbcDAO">
+		<property name="dataSource" ref="dataSource"/>
+		<property name="insertQuery" value="INSERT INTO STUDENT (name, age) VALUES ( ? , ? )"/>
+		<property name="updateAgeByNameSQL" value="UPDATE STUDENT SET name = ? WHERE age = ? "/>
+		<property name="deleteAgeByNameSQL" value="DELETE FROM STUDENT WHERE name = ?"/>
+	</bean>
+
+	<bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+		<property name="dataSource" ref="dataSource"/>
+	</bean>
+
+</beans>

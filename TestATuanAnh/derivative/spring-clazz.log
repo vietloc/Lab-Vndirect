@@ -1,0 +1,114 @@
+[2022-10-20 09:12:51] INFO [main] AppConfig.configureDefaultServletHandling(35) | ====Context start application org.springframework.jdbc.datasource.DriverManagerDataSource@6bd7439d
+[2022-10-20 09:12:51] ERROR [main] AppConfig.configureDefaultServletHandling(48) | com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at com.mysql.cj.jdbc.exceptions.SQLError.createCommunicationsException(SQLError.java:174)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:64)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:828)
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:448)
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:241)
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:198)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:683)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:191)
+	at org.springframework.jdbc.datasource.DriverManagerDataSource.getConnectionFromDriverManager(DriverManagerDataSource.java:155)
+	at org.springframework.jdbc.datasource.DriverManagerDataSource.getConnectionFromDriver(DriverManagerDataSource.java:146)
+	at org.springframework.jdbc.datasource.AbstractDriverBasedDataSource.getConnectionFromDriver(AbstractDriverBasedDataSource.java:205)
+	at org.springframework.jdbc.datasource.AbstractDriverBasedDataSource.getConnection(AbstractDriverBasedDataSource.java:169)
+	at com.spring.sevice.derivative.AppConfig.createTable(AppConfig.java:71)
+	at com.spring.sevice.derivative.AppConfig.configureDefaultServletHandling(AppConfig.java:37)
+	at org.springframework.web.servlet.config.annotation.WebMvcConfigurerComposite.configureDefaultServletHandling(WebMvcConfigurerComposite.java:74)
+	at org.springframework.web.servlet.config.annotation.DelegatingWebMvcConfiguration.configureDefaultServletHandling(DelegatingWebMvcConfiguration.java:73)
+	at org.springframework.web.servlet.config.annotation.WebMvcConfigurationSupport.defaultServletHandlerMapping(WebMvcConfigurationSupport.java:644)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:154)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:653)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:486)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1352)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1195)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:955)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:918)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:147)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:734)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:408)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:308)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295)
+	at com.spring.sevice.derivative.DerivativeApplication.main(DerivativeApplication.java:10)
+Caused by: com.mysql.cj.exceptions.CJCommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:483)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:61)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:105)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:151)
+	at com.mysql.cj.exceptions.ExceptionFactory.createCommunicationsException(ExceptionFactory.java:167)
+	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:89)
+	at com.mysql.cj.NativeSession.connect(NativeSession.java:120)
+	at com.mysql.cj.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:948)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:818)
+	... 37 more
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.base/sun.nio.ch.Net.connect0(Native Method)
+	at java.base/sun.nio.ch.Net.connect(Net.java:579)
+	at java.base/sun.nio.ch.Net.connect(Net.java:568)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:585)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
+	at java.base/java.net.Socket.connect(Socket.java:633)
+	at com.mysql.cj.protocol.StandardSocketFactory.connect(StandardSocketFactory.java:153)
+	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:63)
+	... 40 more
+[2022-10-20 09:14:12] INFO [main] AppConfig.configureDefaultServletHandling(35) | ====Context start application org.springframework.jdbc.datasource.DriverManagerDataSource@4eb63dc8
+[2022-10-20 09:14:12] INFO [main] AppConfig.createTable(74) | ======TABLE derivative already exists !
+[2022-10-20 09:14:17] INFO [http-nio-8080-exec-1] DerivativeDAOImpl.list(100) | SELECT * FROM derivative where 1=1 
+[2022-10-20 09:16:53] INFO [http-nio-8080-exec-5] DerivativeDAOImpl.list(100) | SELECT * FROM derivative where 1=1 and created_date in('2022-10-15')
+[2022-10-20 09:17:46] INFO [http-nio-8080-exec-6] DerivativeDAOImpl.list(100) | SELECT * FROM derivative where 1=1 and created_by in('DEVPOOL')
+[2022-10-20 09:18:04] INFO [http-nio-8080-exec-9] DerivativeDAOImpl.list(100) | SELECT * FROM derivative where 1=1 and derivative_code in('VN30F1812')
+[2022-10-20 09:18:24] INFO [http-nio-8080-exec-2] DerivativeDAOImpl.list(100) | SELECT * FROM derivative where 1=1 and expiration_date in('2022-10-15')
+[2022-10-20 09:19:01] INFO [http-nio-8080-exec-5] DerivativeDAOImpl.list(100) | SELECT * FROM derivative where 1=1 and effective_date in('2022-10-16')
+[2022-10-20 09:26:41] INFO [main] AppConfig.configureDefaultServletHandling(35) | ====Context start application org.springframework.jdbc.datasource.DriverManagerDataSource@4eb63dc8
+[2022-10-20 09:26:41] INFO [main] AppConfig.createTable(74) | ======TABLE derivative already exists !
+[2022-10-20 09:26:46] INFO [http-nio-8080-exec-1] DerivativeDAOImpl.list(76) | effective_date
+[2022-10-20 09:27:16] INFO [main] AppConfig.configureDefaultServletHandling(35) | ====Context start application org.springframework.jdbc.datasource.DriverManagerDataSource@402d6012
+[2022-10-20 09:27:16] INFO [main] AppConfig.createTable(74) | ======TABLE derivative already exists !
+[2022-10-20 09:27:18] INFO [http-nio-8080-exec-1] DerivativeDAOImpl.list(76) | effective_date
+[2022-10-20 09:27:18] INFO [http-nio-8080-exec-1] DerivativeDAOImpl.list(79) | 2022-10-16
+[2022-10-20 09:27:18] INFO [http-nio-8080-exec-1] DerivativeDAOImpl.list(103) | SELECT * FROM derivative where 1=1 and effective_date in('2022-10-16')
+[2022-10-20 09:27:39] INFO [http-nio-8080-exec-4] DerivativeDAOImpl.list(76) | 
+[2022-10-20 09:27:39] INFO [http-nio-8080-exec-4] DerivativeDAOImpl.list(79) | INDEX
+[2022-10-20 09:27:39] INFO [http-nio-8080-exec-4] DerivativeDAOImpl.list(103) | SELECT * FROM derivative where 1=1 and  in('INDEX')
+[2022-10-20 09:27:45] INFO [http-nio-8080-exec-6] DerivativeDAOImpl.list(76) | 
+[2022-10-20 09:27:45] INFO [http-nio-8080-exec-6] DerivativeDAOImpl.list(79) | INDEX
+[2022-10-20 09:27:45] INFO [http-nio-8080-exec-6] DerivativeDAOImpl.list(103) | SELECT * FROM derivative where 1=1 and  in('INDEX')
+[2022-10-20 09:27:50] INFO [http-nio-8080-exec-8] DerivativeDAOImpl.list(76) | 
+[2022-10-20 09:27:50] INFO [http-nio-8080-exec-8] DerivativeDAOImpl.list(79) | INDEX
+[2022-10-20 09:27:50] INFO [http-nio-8080-exec-8] DerivativeDAOImpl.list(103) | SELECT * FROM derivative where 1=1 and  in('INDEX')
+[2022-10-20 09:27:56] INFO [http-nio-8080-exec-9] DerivativeDAOImpl.list(76) | underlying_type
+[2022-10-20 09:27:56] INFO [http-nio-8080-exec-9] DerivativeDAOImpl.list(79) | INDEX
+[2022-10-20 09:27:56] INFO [http-nio-8080-exec-9] DerivativeDAOImpl.list(103) | SELECT * FROM derivative where 1=1 and underlying_type in('INDEX')
+[2022-10-20 09:28:58] INFO [http-nio-8080-exec-3] DerivativeDAOImpl.list(76) | underlying_type
+[2022-10-20 09:28:58] INFO [http-nio-8080-exec-3] DerivativeDAOImpl.list(79) | INDEX,BOND
+[2022-10-20 09:28:58] INFO [http-nio-8080-exec-3] DerivativeDAOImpl.list(103) | SELECT * FROM derivative where 1=1 and underlying_type in('INDEX','BOND')
+[2022-10-20 09:29:10] INFO [http-nio-8080-exec-5] DerivativeDAOImpl.list(76) | underlying_type
+[2022-10-20 09:29:10] INFO [http-nio-8080-exec-5] DerivativeDAOImpl.list(79) | INDEX,BOND
+[2022-10-20 09:29:10] INFO [http-nio-8080-exec-5] DerivativeDAOImpl.list(103) | SELECT * FROM derivative where 1=1 and underlying_type in('INDEX','BOND')
+[2022-10-20 09:32:15] INFO [main] AppConfig.configureDefaultServletHandling(35) | ====Context start application org.springframework.jdbc.datasource.DriverManagerDataSource@4eb63dc8
+[2022-10-20 09:32:15] INFO [main] AppConfig.createTable(74) | ======TABLE derivative already exists !
+[2022-10-20 09:32:25] INFO [http-nio-8080-exec-1] DerivativeDAOImpl.list(76) | underlying_type
+[2022-10-20 09:32:25] INFO [http-nio-8080-exec-1] DerivativeDAOImpl.list(79) | INDEX,BOND
+[2022-10-20 09:32:25] INFO [http-nio-8080-exec-1] DerivativeDAOImpl.list(103) | SELECT * FROM derivative where 1=1 and underlying_type in('INDEX','BOND',)
+[2022-10-20 09:33:35] INFO [http-nio-8080-exec-5] DerivativeDAOImpl.list(76) | underlying_type
+[2022-10-20 09:33:35] INFO [http-nio-8080-exec-5] DerivativeDAOImpl.list(79) | INDEX,BOND
+[2022-10-20 09:33:35] INFO [http-nio-8080-exec-5] DerivativeDAOImpl.list(103) | SELECT * FROM derivative where 1=1 and underlying_type in('INDEX','BOND',)

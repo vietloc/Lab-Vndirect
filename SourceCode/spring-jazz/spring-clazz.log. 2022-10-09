@@ -1,0 +1,2 @@
+[2022-10-09 16:00:27] INFO [main] ContextStartEventHandler.onApplicationEvent(20) |  context start application org.springframework.jdbc.datasource.DriverManagerDataSource@31aab981
+[2022-10-09 16:00:28] INFO [main] ContextStartEventHandler.creatTable(34) | Table HN_GROUP already exists!

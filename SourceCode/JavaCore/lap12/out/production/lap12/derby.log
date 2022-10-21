@@ -1,0 +1,13 @@
+----------------------------------------------------------------
+Tue Sep 20 13:34:31 ICT 2022:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.15.2.0 - (1873585): instance a816c00e-0183-599a-f6a0-000007500000 
+on database directory C:\Users\AD\OneDrive - vnua.edu.vn\Máy tính\vnd\lap12\sampledb with class loader jdk.internal.loader.ClassLoaders$AppClassLoader@2f0e140b 
+Loaded from file:/C:/Users/AD/OneDrive%20-%20vnua.edu.vn/M%c3%a1y%20t%c3%adnh/vnd/db-derby-10.15.2.0-bin/lib/derby.jar
+java.vendor=Oracle Corporation
+java.runtime.version=18.0.2.1+1-1
+user.dir=C:\Users\AD\OneDrive - vnua.edu.vn\Máy tính\vnd\lap12
+os.name=Windows 10
+os.arch=amd64
+os.version=10.0
+derby.system.home=null
+Database Class Loader started - derby.database.classpath=''

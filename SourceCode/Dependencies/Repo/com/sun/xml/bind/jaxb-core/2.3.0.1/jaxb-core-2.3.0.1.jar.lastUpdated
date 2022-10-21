@@ -1,0 +1,4 @@
+#NOTE: This is a Maven Resolver internal implementation file, its format can be changed without prior notice.
+#Tue Oct 04 14:18:21 ICT 2022
+@default-central-https\://repo.maven.apache.org/maven2/.lastUpdated=1664867901534
+https\://repo.maven.apache.org/maven2/.error=Could not transfer artifact com.sun.xml.bind\:jaxb-core\:jar\:2.3.0.1 from/to central (https\://repo.maven.apache.org/maven2)\: transfer failed for https\://repo.maven.apache.org/maven2/com/sun/xml/bind/jaxb-core/2.3.0.1/jaxb-core-2.3.0.1.jar
